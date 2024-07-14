@@ -1,8 +1,3 @@
-## 字面量
-![img.png](img.png)  
-![img_1.png](img_1.png)
-
-```java
 package com.itheima.literal;
 
 public class LiteralDemo {
@@ -31,16 +26,9 @@ public class LiteralDemo {
         System.out.println("");
         System.out.println("  ");
         System.out.println("我");
-        
+
         // 5.布尔值：只有两个值 true false
         System.out.println(true);
         System.out.println(false);
     }
 }
-
-```
-
-```diff
-  dfjkdslfskld
-+ fjskdflds 
-```
