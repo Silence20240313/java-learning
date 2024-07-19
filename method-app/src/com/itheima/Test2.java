@@ -5,7 +5,7 @@ import java.util.Random;
 public class Test2 {
     public static void main(String[] args) {
         // TODO 生成随机验证码
-        System.out.println(createCode(3));
+        System.out.println(createCode(4));
     }
 
     public static String createCode(int n){
@@ -13,7 +13,7 @@ public class Test2 {
         Random r = new Random();
         // 3.定义一个String类型的变量用于记住产生的每位随机字符
         String code = "";
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             // i = 1 2 3 ...n
             // 2.为每个位置生成一个随机字符，数字大小写字母
             // 思路：随机一个0 1 2 之间的数字出来，0代表数字，1 2代表大小写字母
