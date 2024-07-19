@@ -20,8 +20,7 @@ public class MethodDemo1 {
 }
 
 ```
-### 方法的其他形式  
-![img_105.png](img_105.png)  
+### 方法的其他形式   
 ![img_107.png](img_107.png)  
 ![img_108.png](img_108.png)  
 ```java
@@ -118,7 +117,7 @@ public class MethodDemo1 {
 }
 
  ```
-2.  引用类型的参数传递 
+2.  引用类型的参数传递   
 ![img_119.png](img_119.png)  
 ```java
 package com.itheima.parameter;
@@ -272,5 +271,10 @@ public class ReturnDemo1 {
          System.out.println(c);
     }
 }
+
+```
+### java案例  
+![img_128.png](img_128.png)  
+```java
 
 ```
