@@ -12,5 +12,6 @@ public class Test {
         StudentOperator operator = new StudentOperator(s1);
         operator.printPass();
 
+
     }
 }
