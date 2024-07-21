@@ -6,5 +6,6 @@ public class Test {
         Student s1 = new Student();
         s1.setScore(80);
         System.out.println(s1.getScore());
+        s1.printPass();
     }
 }

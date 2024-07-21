@@ -3,6 +3,7 @@ package com.itheima.demo;
 public class MovieOperator {
     private Movie[] movies;
     public MovieOperator(Movie[] movies){
+
         this.movies = movies;
     }
 

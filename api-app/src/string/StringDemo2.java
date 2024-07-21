@@ -5,7 +5,7 @@ public class StringDemo2 {
         // TODO 掌握string提供的处理字符串的常用方法
         String s = "黑马Java";
         // 1.获取字符串的长度
-        System.out.println(s.length());// 6
+        System.out.println(s);// 6
 
         // 2.提取字符串中某个索引位置处的字符
         char c = s.charAt(1);
@@ -19,10 +19,12 @@ public class StringDemo2 {
         }
 
         // 3.把字符串转换成字符数组，再进行遍历
+        System.out.println("--------");
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             System.out.println(chars[i]);// 黑马Java
         }
+        System.out.println("--------");
 
         // 4.判断字符串内容，内容一样就返回true
         String s1 = new String("黑马");
