@@ -1,4 +1,5 @@
 ## 常用API      
+就是java自带的一些程序    
 
 ### 包    
 ![img_163.png](img_163.png)  
@@ -143,12 +144,201 @@ public class StringDemo3 {
 ![img_176.png](img_176.png)  
 
 4.  String的应用案例  
+![img_178.png](img_178.png)  
 ![img_177.png](img_177.png)  
+```java
+package string;
 
+import java.util.Scanner;
 
+public class StringTest4 {
+    public static void main(String[] args) {
+        // 1.开发一个登录界面
+        for(int i = 0; i < 3;i++) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("请输入登录名称");
+            String loginName = sc.next();
+            System.out.println("请输入登录密码");
+            String passWord = sc.next();
 
+            // 5.开始调用登录方法，判断是否登录成功
+            boolean rs =login(loginName,passWord);
+            if (rs){
+                System.out.println("登录成功");
+                break;// 跳出循环，登录完成
+            }else{
+                System.out.println("登录失败");
+            }
+        }
+    }
 
+    // 2.开发一个登录方法，接收用户的登录名和密码，返回认证的结果
+    public static boolean login(String loginName,String passWord){
+      // 3.准备一份系统正确的登录名和密码
+        String okloginName = "itheima";
+        String okpassWord = "123456";
 
+        // 4.开始正式判断用户是否登录成功
+        /*if (okloginName.equals(loginName) && okpassWord.equals(passWord)){
+            // 登录成功
+            return true;
+        }else{
+            return false;
+        }*/
+        return okloginName.equals(loginName) && okpassWord.equals(passWord);
+    }
+}
+
+```
+![img_179.png](img_179.png)  
+```java
+package string;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class StringTest5 {
+    public static void main(String[] args) {
+        System.out.println(createCode(4));
+        System.out.println(createCode(6));
+    }
+
+    // 1.设计一个方法，返回指定位数的验证码
+    public static String createCode(int n){
+        // 2.定义两个变量，一个是记录最终产生的随机验证码，一个是记住可能用到的全部字符
+        String code = "";
+        String date = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+        Random r = new Random();
+        // 3.开始定义一个循环产生每位随机字符
+        for (int i = 0; i < n; i++) {
+            // 4.随机一个字符范围内的索引
+            int index = r.nextInt(date.length());
+            // 5.根据索引去全部字符中，提取该字符
+            code += date.charAt(index);
+        }
+        // 6.返回code即可
+        return code;
+    }
+}
+
+```
 
 ### ArrayList     
+![img_180.png](img_180.png)  
+![img_182.png](img_182.png)  
+![img_184.png](img_184.png)  
+![img_183.png](img_183.png)  
+```java
+package com.itheima.arraylist;
+
+import java.util.ArrayList;
+
+public class ArrayListDemo1 {
+    public static void main(String[] args) {
+        // 1.创建一个ArrayList的集合对象
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("黑马");
+        list.add("黑马");
+        list.add("Java");
+        System.out.println(list);//[黑马, 黑马, Java]
+
+        // 2.往集合中的某个索引位置处添加一个数据
+        list.add(1,"MYSQL") ;
+        System.out.println(list);// [黑马, MYSQL, 黑马, Java]
+
+        // 3.根据索引获取集合中某个索引位置处的值
+        String rs =list.get(1);
+        System.out.println(rs);// MYSQL
+
+        // 4.获取集合的大小，返回集合中存储的元素个数
+        System.out.println(list.size());// 4
+
+        // 5.根据索引删除集合中的某个元素值，会返回被删除的元素值给我们
+        System.out.println(list.remove(1));// MYSQL
+        System.out.println(list);// [黑马, 黑马, Java]
+
+        // 6.直接删除某个元素值，删除成功会返回true,反之返回false
+        System.out.println(list.remove("Java"));// true
+        System.out.println(list);// [黑马, 黑马]
+
+        list.add(1,"html");
+        System.out.println(list);//[html, 黑马]
+
+        // 默认删除的是第一次出现的这个黑马的数据的
+        System.out.println(list.remove("黑马"));// true
+        System.out.println(list);// [黑马]
+
+        // 7.修改某个索引位置处的数据，修改后会返回原来的值给我们
+        System.out.println(list.set(1, "黑马程序员"));// 黑马
+        System.out.println(list);// [html, 黑马程序员]
+
+    }
+}
+
+```
+### ArrayList案例  
+![img_186.png](img_186.png)  
+![img_185.png](img_185.png)  
+```java
+package com.itheima.arraylist;
+
+import java.util.ArrayList;
+
+public class ArrayListTest2 {
+    public static void main(String[] args) { 
+        // 1.创建一个ArrayList的集合对象
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Java入门");
+        list.add("宁夏枸杞");
+        list.add("黑枸杞");
+        list.add("人字拖");
+        list.add("特技枸杞");
+        list.add("枸杞子");
+        System.out.println(list);// [Java入门, 宁夏枸杞, 黑枸杞, 人字拖, 特技枸杞, 枸杞子]
+
+        // 2.开始完成需求：从集合中找出包含枸杞的数据并删除他
+        /* for (int i = 0; i < list.size(); i++) {
+            // i = 0 1 2 3 4 5
+            //取出当前遍历到的数据
+            String ele = list.get(i);
+            // 判断这个数据中是否包含枸杞
+            if (ele.contains("枸杞")){
+                // 直接从集合中删除该数据
+                list.remove(ele);
+            }
+        }
+        System.out.println(list);*/  // [Java入门, 黑枸杞, 人字拖, 枸杞子]
+
+
+        // TODO 方式1：每次删除一个数据后，就让i往左边退一步
+        /*for (int i = 0; i < list.size(); i++) {
+            // i = 0 1 2 3 4 5
+            //取出当前遍历到的数据
+            String ele = list.get(i);
+            // 判断这个数据中是否包含枸杞
+            if (ele.contains("枸杞")){
+                // 直接从集合中删除该数据
+                list.remove(ele);
+                i--;
+            }
+        }
+        System.out.println(list);*/   // [Java入门, 人字拖]
+
+        // TODO 方式2：从集合的后面倒着遍历并删除
+        for (int i = list.size()-1; i >= 0 ; i--) {
+            //取出当前遍历到的数据
+            String ele = list.get(i);
+            // 判断这个数据中是否包含枸杞
+            if (ele.contains("枸杞")) {
+                // 直接从集合中删除该数据
+                list.remove(ele);
+            }
+        }
+        System.out.println(list); // [Java入门, 人字拖]
+    }
+}
+
+```
 

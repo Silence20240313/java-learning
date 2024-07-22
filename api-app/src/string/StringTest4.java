@@ -14,7 +14,7 @@ public class StringTest4 {
 
             // 5.开始调用登录方法，判断是否登录成功
             boolean rs =login(loginName,passWord);
-            if (rs){
+            if (rs == true){
                 System.out.println("登录成功");
                 break;// 跳出循环，登录完成
             }else{
