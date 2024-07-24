@@ -1,8 +1,8 @@
 ## java方法   
-![img_101.png](img_101.png)  
-![img_102.png](img_102.png)  
-![img_103.png](img_103.png)  
-![img_104.png](img_104.png)  
+![img_101.png](image1/img_101.png)  
+![img_102.png](image1/img_102.png)  
+![img_103.png](image1/img_103.png)  
+![img_104.png](image1/img_104.png)  
 ```java
 package com.itheima.define;
 
@@ -21,8 +21,8 @@ public class MethodDemo1 {
 
 ```
 ### 方法的其他形式   
-![img_107.png](img_107.png)  
-![img_108.png](img_108.png)  
+![img_107.png](image1/img_107.png)  
+![img_108.png](image1/img_108.png)  
 ```java
 package com.itheima.define;
 
@@ -44,12 +44,12 @@ public class MethodDemo2 {
 
 ```
 ### 方法使用时的常见问题  
-![img_109.png](img_109.png)  
+![img_109.png](image1/img_109.png)  
 
 ### 案例  
-![img_110.png](img_110.png)  
-![img_113.png](img_113.png)  
-![img_111.png](img_111.png)  
+![img_110.png](image1/img_110.png)  
+![img_113.png](image1/img_113.png)  
+![img_111.png](image1/img_111.png)  
 ```java
 package com.itheima.define;
 
@@ -70,8 +70,8 @@ public class MethodTest3 {
 }
 
 ```
-![img_112.png](img_112.png)  
-![img_114.png](img_114.png)  
+![img_112.png](image1/img_112.png)  
+![img_114.png](image1/img_114.png)  
 ```java
 package com.itheima.define;
 
@@ -93,11 +93,11 @@ public class MethodTest4 {
 
 ```
 ### 方法参数传递  
-![img_116.png](img_116.png)  
-![img_120.png](img_120.png)  
+![img_116.png](image1/img_116.png)  
+![img_120.png](image1/img_120.png)  
 1.  基本类型的参数传递  
-![img_117.png](img_117.png)  
-![img_118.png](img_118.png)  
+![img_117.png](image1/img_117.png)  
+![img_118.png](image1/img_118.png)  
 ```java
 package com.itheima.parameter;
 
@@ -118,7 +118,7 @@ public class MethodDemo1 {
 
  ```
 2.  引用类型的参数传递   
-![img_119.png](img_119.png)  
+![img_119.png](image1/img_119.png)  
 ```java
 package com.itheima.parameter;
 
@@ -139,7 +139,7 @@ public class MethodDemo2 {
 
 ```
 ### 参数传递的案例  
-![img_121.png](img_121.png)  
+![img_121.png](image1/img_121.png)  
 ```java
 package com.itheima.parameter;
 
@@ -161,7 +161,7 @@ public class MethodTest2 {
 }
 
 ```
-![img_122.png](img_122.png)  
+![img_122.png](image1/img_122.png)  
 ```java
 package com.itheima.parameter;
 
@@ -205,7 +205,7 @@ public class MethodTest3 {
 
 ### 方法重载  
 
-![img_123.png](img_123.png)  
+![img_123.png](image1/img_123.png)  
 ```java 
 package com.itheima.overload;
 
@@ -224,7 +224,7 @@ public class MethodOverLoadDemo1 {
 }
 
 ``` 
-![img_125.png](img_125.png)  
+![img_125.png](image1/img_125.png)  
 ```java
 package com.itheima.overload;
 
@@ -252,8 +252,8 @@ public class MethodTest2 {
 
 ```
 ### return关键字  
-![img_127.png](img_127.png)  
-![img_126.png](img_126.png)  
+![img_127.png](image1/img_127.png)  
+![img_126.png](image1/img_126.png)  
 ```java
 package com.itheima.returndemo;
 
@@ -274,8 +274,8 @@ public class ReturnDemo1 {
 
 ```
 ### java案例  
-![img_128.png](img_128.png)  
-![img_129.png](img_129.png)  
+![img_128.png](image1/img_128.png)  
+![img_129.png](image1/img_129.png)  
 ```java
 package com.itheima;
 

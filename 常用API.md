@@ -2,13 +2,13 @@
 就是java自带的一些程序    
 
 ### 包    
-![img_163.png](img_163.png)  
+![img_163.png](image1/img_163.png)  
 
 ### String    
 1.  String概述  
-![img_164.png](img_164.png)  
-![img_165.png](img_165.png)  
-![img_166.png](img_166.png)  
+![img_164.png](image1/img_164.png)  
+![img_165.png](image1/img_165.png)  
+![img_166.png](image1/img_166.png)  
 ```java
 package string;
 
@@ -34,7 +34,7 @@ public class StringDemo1 {
 
 ```
 2.  String的常用方法  
-![img_167.png](img_167.png)  
+![img_167.png](image1/img_167.png)  
 ```java
 package string;
 
@@ -109,11 +109,11 @@ public class StringDemo2 {
 
  ```
 3.  String使用时的注意事项  
-![img_168.png](img_168.png)  
-![img_173.png](img_173.png)  
-![img_170.png](img_170.png)   
-![img_171.png](img_171.png)  
-![img_172.png](img_172.png)  
+![img_168.png](image1/img_168.png)  
+![img_173.png](image1/img_173.png)  
+![img_170.png](image1/img_170.png)   
+![img_171.png](image1/img_171.png)  
+![img_172.png](image1/img_172.png)  
 ```java
 package string;
 
@@ -140,12 +140,12 @@ public class StringDemo3 {
 }
 
 ```
-![img_175.png](img_175.png)  
-![img_176.png](img_176.png)  
+![img_175.png](image1/img_175.png)  
+![img_176.png](image1/img_176.png)  
 
 4.  String的应用案例  
-![img_178.png](img_178.png)  
-![img_177.png](img_177.png)  
+![img_178.png](image1/img_178.png)  
+![img_177.png](image1/img_177.png)  
 ```java
 package string;
 
@@ -190,7 +190,7 @@ public class StringTest4 {
 }
 
 ```
-![img_179.png](img_179.png)  
+![img_179.png](image1/img_179.png)  
 ```java
 package string;
 
@@ -225,10 +225,10 @@ public class StringTest5 {
 ```
 
 ### ArrayList     
-![img_180.png](img_180.png)  
-![img_182.png](img_182.png)  
-![img_184.png](img_184.png)  
-![img_183.png](img_183.png)  
+![img_180.png](image1/img_180.png)  
+![img_182.png](image1/img_182.png)  
+![img_184.png](image1/img_184.png)  
+![img_183.png](image1/img_183.png)  
 ```java
 package com.itheima.arraylist;
 
@@ -279,8 +279,8 @@ public class ArrayListDemo1 {
 
 ```
 ### ArrayList案例  
-![img_186.png](img_186.png)  
-![img_185.png](img_185.png)  
+![img_186.png](image1/img_186.png)  
+![img_185.png](image1/img_185.png)  
 ```java
 package com.itheima.arraylist;
 
