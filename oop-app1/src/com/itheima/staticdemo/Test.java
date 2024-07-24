@@ -25,7 +25,5 @@ public class Test {
         System.out.println(s2.age);// 18
 
         // System.out.println(Student.age); // 报错
-
-
     }
 }
