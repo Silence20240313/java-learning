@@ -272,14 +272,169 @@ public class Test {
 ```  
 ![img_108.png](img_108.png)  
 1.  localDate  LocalTime localDateTime  
+![img_110.png](img_110.png)  
+```java
+package com.itheima.jdk8_time;
 
+import java.time.LocalDate;
+
+public class Test1_localDate {
+    public static void main(String[] args) {
+        // 0 获取本地日期对象(不可变对象)
+        LocalDate ld = LocalDate.now();// 年 月 日
+        System.out.println(ld);// 2024-07-30
+
+        // 1. 获取日期对象中的信息
+        int year = ld.getYear();// 年
+        int month = ld.getMonthValue(); // 月 1-12
+        int day = ld.getDayOfMonth();// 日
+        int day0fYear = ld.getDayOfYear();// 一年中的第几天
+        int day0fWeek = ld.getDayOfWeek().getValue();// 星期几
+        System.out.println(year);
+        System.out.println(day);
+        System.out.println(day0fWeek);
+
+        // 2.直接修改某个信息
+        LocalDate ld2 = ld.withYear(2099);
+        LocalDate ld3 = ld.withMonth(12);
+        System.out.println(ld2);
+        System.out.println(ld3);
+        System.out.println(ld);
+
+        // 3.把某个信息加多少
+        LocalDate ld4 = ld.plusYears(2);
+        LocalDate ld5 = ld.plusMonths(2);
+
+        // 4.把某个信息减多少
+        LocalDate ld6 = ld.minusYears(2);
+        LocalDate ld7 = ld.minusMonths(2);
+
+        // 5.获取指定日期的LocalDate对象
+        LocalDate ld8 = LocalDate.of(2099,12,12);
+        LocalDate ld9 = LocalDate.of(2099,12,12);
+
+        // 6.判断2个日期对象，是否相等，在前还是在后
+        System.out.println(ld8.equals(ld9));// true
+        System.out.println(ld8.isAfter(ld));// true
+        System.out.println(ld8.isBefore(ld));// false
+    }
+}
+
+```
+```java
+package com.itheima.jdk8_time;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Test2_LocalTime {
+    public static void main(String[] args) {
+        // 0 获取本地时间对象
+        LocalTime lt = LocalTime.now();// 时 分 秒 纳秒 不可变的
+        System.out.println(lt);// 17:53:46.119306900
+
+        // 1. 获取时间中的信息
+        int hour = lt.getHour();
+        int minute = lt.getMinute();
+        int second = lt.getSecond();
+        int nano = lt.getNano();
+
+        // 2.修改时间
+        LocalTime lt3 = lt.withHour(10);
+        LocalTime lt4 = lt.withMinute(10);
+        LocalTime lt5 = lt.withSecond(10);
+        LocalTime lt6 = lt.withNano(10);
+
+        // 3.加多少
+        LocalTime lt7 = lt.plusHours(10);
+        LocalTime lt8 = lt.plusMinutes(10);
+        LocalTime lt9 = lt.plusSeconds(10);
+        LocalTime lt10 = lt.plusNanos(10);
+
+
+        // 4.减多少
+        LocalTime lt11 = lt.minusHours(10);
+        LocalTime lt12 = lt.minusMinutes(10);
+        LocalTime lt13 = lt.minusSeconds(10);
+        LocalTime lt14 = lt.minusNanos(10);
+
+        // 5.获取指定时间的LocalTime对象
+        LocalTime lt15 = LocalTime.of(12,12,12);
+        LocalTime lt16 = LocalTime.of(12,12,12);
+
+
+        // 6.判断2个时间对象，是否相等，在前还是在后
+        System.out.println(lt15.equals(lt16));
+        System.out.println(lt15.isAfter(lt));
+        System.out.println(lt15.isBefore(lt));
+    }
+}
+
+```
+```java
+package com.itheima.jdk8_time;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class Test3_localDateTime {
+    public static void main(String[] args) {
+        // 0 获取本地日期和时间对象
+        LocalDateTime ldt = LocalDateTime.now();// 年 月 日 时 分 秒 纳秒
+        System.out.println(ldt);
+
+        // 1. 可以获取日期和时间的全部信息
+        int year = ldt.getYear();// 年
+        int month = ldt.getMonthValue(); // 月
+        int day = ldt.getDayOfMonth();// 日
+        int day0fYear = ldt.getDayOfYear();// 一年中的第几天
+        int day0fWeek = ldt.getDayOfWeek().getValue();// 星期几
+        int hour = ldt.getHour();// 时
+        int minute = ldt.getMinute();// 分
+        int second = ldt.getSecond();// 秒
+        int nano = ldt.getNano();// 纳秒
+
+        // 2.修改时间信息
+        LocalDateTime ldt2 = ldt.withYear(2029);
+        LocalDateTime ldt3 = ldt.withMinute(59);
+
+        // 3.加多少
+        LocalDateTime ldt4 = ldt.plusYears(2);
+        LocalDateTime ldt5 = ldt.plusMinutes(3);
+
+        // 4.减多少
+        LocalDateTime ldt6 = ldt.minusYears(2);
+        LocalDateTime ldt7 = ldt.minusMinutes(3);
+
+        // 5.获取指定日期和时间的LocalDateTime对象
+        LocalDateTime ldt8 = LocalDateTime.of(2029,12,12,12,12,12,12);
+        LocalDateTime ldt9 = LocalDateTime.of(2029,12,12,12,12,12,12);
+
+        // 6.判断2个日期，时间对象，是否相等，在前还是在后
+        System.out.println(ldt9.equals(ldt8));
+        System.out.println(ldt9.isAfter(ldt));
+        System.out.println(ldt9.isBefore(ldt));
+
+        // 7.可以把LocalDateTime转换成LocalDate和LocalTime
+        LocalDate ld =  ldt.toLocalDate();
+        LocalTime lt =  ldt.toLocalTime();
+        LocalDateTime ldt10 = LocalDateTime.of(ld,lt);
+    }
+}
+
+```
 2.  Zoneld   ZoneDateTime  
+
 
 3.  Instant  
 
+
 4.  DateTimeFormatter  
 
+
 5.  Duration  Period  
+
 
 ###  Arrays  
 
