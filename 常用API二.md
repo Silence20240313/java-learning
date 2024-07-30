@@ -270,7 +270,7 @@ public class Test {
 }
 
 ```  
-![img_108.png](img_108.png)  
+![img_120.png](img_120.png)  
 1.  localDate  LocalTime localDateTime  
 ![img_110.png](img_110.png)  
 ```java
@@ -424,20 +424,329 @@ public class Test3_localDateTime {
 }
 
 ```
+![img_111.png](img_111.png)  
+![img_112.png](img_112.png)  
+![img_113.png](img_113.png)  
 2.  Zoneld   ZoneDateTime  
+![img_115.png](img_115.png)  
+![img_116.png](img_116.png)  
+```java
+package com.itheima.jdk8_time;
 
+import java.time.Clock;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Calendar;
+import java.util.TimeZone;
 
+public class Test4_Zoneld_ZonedDateTime {
+    public static void main(String[] args) {
+        // TODO 时区和带时区的时间
+        // 1.常见方法
+        // 获取系统默认的时区
+        ZoneId zoneId = ZoneId.systemDefault();
+        System.out.println(zoneId.getId());
+        System.out.println(zoneId);
+
+        // 获取java支持的全部时区ID
+        System.out.println(ZoneId.getAvailableZoneIds());
+
+        // 把某个时区ID封装成ZoneId对象
+        ZoneId zoneId1 = ZoneId.of("Asia/Aden");
+
+        // 2.带时区的时间
+        // 获取某个时区的ZonedDateTime对象
+        ZonedDateTime now = ZonedDateTime.now(zoneId1);
+        System.out.println(now);
+
+        ZonedDateTime now1 = ZonedDateTime.now(Clock.systemUTC());
+        System.out.println(now1);
+
+        // 获取系统默认时区的ZonedDateTime对象
+        ZonedDateTime now2 = ZonedDateTime.now();
+        System.out.println(now2);
+
+        // Calendar instance = Calendar.getInstance(TimeZone.getTimeZone(zoneId));
+    }
+}
+
+```
 3.  Instant  
+![img_118.png](img_118.png)   
+```java
+package com.itheima.jdk8_time;
 
+import java.time.Instant;
 
+public class Test5_Instant {
+    public static void main(String[] args) {
+        // 1.创建Instant的对象，获取此刻时间信息
+        Instant now =  Instant.now();
+
+        // 2.获取总秒数
+        long second = now.getEpochSecond();
+        System.out.println(second);
+
+        // 3.不够一秒的纳秒数
+        int nano =  now.getNano();
+        System.out.println(nano);
+
+        System.out.println(now);
+
+        Instant instant = now.plusNanos(111);
+
+        // Instant对象的作用：做代码的性能分析，或者记录用户的操作时间点
+        Instant now1 = Instant.now();
+        // 代码执行
+        Instant now2 = Instant.now();
+    }
+}
+
+```
 4.  DateTimeFormatter  
+![img_119.png](img_119.png)  
+```java
+package com.itheima.jdk8_time;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
+public class Test6_DateTimeFormatter {
+    public static void main(String[] args) {
+        // 1.创建一个日期时间格式化器对象出来
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH:mm:ss");
+
+        // 2.对时间进行格式化
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);// 2024-07-30T21:32:01.606800900
+
+        String rs = formatter.format(now);
+        System.out.println(rs);// 2024年07月30日 21:32:01   正向格式化
+
+        // 3.格式化时间，其实还有一种方案
+        String rs2 = now.format(formatter);
+        System.out.println(rs2);// 2024年07月30日 21:33:25  反向格式化
+
+        // 4.解析时间:一般使用LocalDateTime提供的解析方法来解析
+        String dateStr = "2029年12月12日 12:12:11";
+        LocalDateTime ldt = LocalDateTime.parse(dateStr,formatter);
+        System.out.println(ldt);// 2029-12-12T12:12:11
+    }
+}
+
+```  
 5.  Duration  Period  
+![img_122.png](img_122.png)  
+```java
+package com.itheima.jdk8_time;
 
+import java.time.LocalDate;
+import java.time.Period;
 
+public class Test7_Period {
+    public static void main(String[] args) {
+        LocalDate start = LocalDate.of(2029,8,10);
+        LocalDate end = LocalDate.of(2029,8,15);
+        // 1.创建Period对象，封装两个日期对象
+        Period period= Period.between(start,end);
+
+        // 2.通过period对象获取两个日期对象相差的信息
+        System.out.println(period.getYears());// 0
+        System.out.println(period.getMonths());// 0
+        System.out.println(period.getDays());// 5
+    }
+}
+
+```
+![img_121.png](img_121.png)  
+```java
+package com.itheima.jdk8_time;
+
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+public class Test8_Duration {
+    public static void main(String[] args) {
+        LocalDateTime start = LocalDateTime.of(2025,11,11,11,10,10);
+        LocalDateTime end = LocalDateTime.of(2025,11,11,11,11,11);
+        // 1.得到Duration对象
+        Duration duration = Duration.between(start,end);
+
+        // 2.获取两个时间对象间隔的信息
+        System.out.println(duration.toDays());// 天  0
+        System.out.println(duration.toHours());// 小时  0
+        System.out.println(duration.toMinutes());// 分  1
+        System.out.println(duration.toSeconds());// 秒  61
+        System.out.println(duration.toMillis());// 毫秒  61000
+        System.out.println(duration.toNanos());// 纳秒  61000000000
+    }
+}
+
+```  
+![img_123.png](img_123.png)  
 ###  Arrays  
+![img_124.png](img_124.png)  
+```java 
+package com.itheima.arrays;
 
+import java.util.Arrays;
+import java.util.function.IntToDoubleFunction;
+
+public class ArraysTest1 {
+    public static void main(String[] args) {
+        // 1.返回数组的内容
+        int[] arr = {10,20,30,40,50,60};
+        System.out.println(Arrays.toString(arr));// [10, 20, 30, 40, 50, 60]
+
+        // 2.拷贝数组：指定范围，包前不包后
+        int[] arr2 = Arrays.copyOfRange(arr,1,4);
+        System.out.println(Arrays.toString(arr2));// [20, 30, 40]
+
+        // 3.拷贝数组，可以指定新数组的长度
+        int[] arr3 = Arrays.copyOf(arr,10);
+        System.out.println(Arrays.toString(arr3));// [10, 20, 30, 40, 50, 60, 0, 0, 0, 0]
+
+        // 4.把数组中的原数据改为新数据又存进去
+        double[] prices = {99.8,128,100};
+        // 把所有的价格都打八折，然后又存进去
+        Arrays.setAll(prices, new IntToDoubleFunction() {
+            @Override
+            public double applyAsDouble(int value) {
+                // value 取索引
+                return prices[value] * 0.8;
+            }
+        });
+        System.out.println(Arrays.toString(prices));//  [79.84, 102.4, 80.0]
+
+        // 5.对数组进行排序，默认升序排序
+        Arrays.sort(prices);
+        System.out.println(Arrays.toString(prices));// [79.84, 80.0, 102.4]
+    }
+}
+
+```
+![img_125.png](img_125.png)  
+```java
+package com.itheima.arrays;
+
+public class Student implements Comparable<Student> {
+    private String name;
+    private double height;
+    private int age;
+
+    // 制定比较规则
+    // this o
+    @Override
+    public int compareTo(Student o) {
+        // 约定1：左边对象 大于 右边对象 请您返回正整数
+        // 约定2：左边对象 小于 右边对象 请您返回负整数
+        // 约定3：左边对象 等于 右边对象 请您返回0
+        // 按照年龄升序排序
+  /*      if (this.age > o.age){
+            return 1;
+        } else if (this.age < o.age) {
+            return -1;
+        }
+        return 0;*/
+         return this.age - o.age;// 升序
+         // return o.age - this.age ;// 降序
+    }
+
+    public Student() {
+    }
+
+    public Student(String name, double height, int age) {
+        this.name = name;
+        this.height = height;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", height=" + height +
+                ", age=" + age +
+                '}';
+    }
+}
+
+```
+```java
+package com.itheima.arrays;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class ArraysTest2 {
+    public static void main(String[] args) {
+    // TODO 对数组中的对象进行排序
+        Student[]  students = new Student[4];
+        students[0] = new  Student("蜘蛛精",169.5,23);
+        students[1] = new  Student("紫霞",163.8,26);
+        students[2] = new  Student("紫霞",163.8,26);
+        students[3] = new  Student("至尊宝",167.5,24);
+
+        // 1.对数组进行排序
+        /*Arrays.sort(students);
+        System.out.println(Arrays.toString(students));*/
+        // [Student{name='蜘蛛精', height=169.5, age=23},
+        // Student{name='至尊宝', height=167.5, age=24},
+        // Student{name='紫霞', height=163.8, age=26},
+        //  Student{name='紫霞', height=163.8, age=26}]
+
+        // 2.参数一；需要排序的数组
+        //   参数二：比较器对象（用来制定对象的比较规则）
+        Arrays.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                // 制定比较规则  左边对象o1  右边对象02
+                // 约定1：左边对象 大于 右边对象 请您返回正整数
+                // 约定2：左边对象 小于 右边对象 请您返回负整数
+                // 约定3：左边对象 等于 右边对象 请您返回0
+               /* if (o1.getHeight() > o2.getHeight()){
+                    return 1 ; 
+                } else if (o1.getHeight() < o2.getHeight) {
+                    return -1 ;
+                }
+                return 0;// 升序*/
+                return Double.compare(o1.getHeight(),o2.getHeight());// 升序
+                // return Double.compare(o2.getHeight(),o1.getHeight());// 降序
+            }
+        });
+        System.out.println(Arrays.toString(students));
+        //[Student{name='紫霞', height=163.8, age=26}, 
+        // Student{name='紫霞', height=163.8, age=26}, 
+        // Student{name='至尊宝', height=167.5, age=24}, 
+        // Student{name='蜘蛛精', height=169.5, age=23}]
+    }
+}
+
+```
 ###  JDK8新特性：Lambda表达式 
 
 ###  JDK8新特性：方法引用  
