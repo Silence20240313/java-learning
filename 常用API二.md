@@ -792,11 +792,50 @@ abstract class Animal{
     public abstract void run();
 }
 ```
-
-
-
-
-
+![img_129.png](img_129.png)  
+![img_130.png](img_130.png)  
+Lambda表达式的省略规则：  
+![img_131.png](img_131.png)  
 
 ###  JDK8新特性：方法引用  
+1.  静态方法的引用  
+![img_132.png](img_132.png)  
+2.  实例方法的引用  
+![img_133.png](img_133.png)  
+3.  特定类型方法的引用  
+![img_134.png](img_134.png)  
+ ```JAVA
+package com.itheima.method_references;
 
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+// TODO 特定类型的方法引用
+public class Test2 {
+    public static void main(String[] args) {
+        String[] names = {"boby","angela","Andy","dlei","caocao","Babo","jack","Cici"};
+
+        //进行排序（默认是按照字符串的首字符编号进行升序排序的）
+        // Arrays.sort(names);
+
+        // 要求忽略首字符大小写进行排序
+        /*Arrays.sort(names, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                // 制定比较规则   o1 = "Andy"   02 = "angela"
+                return o1.compareToIgnoreCase(o2);
+            }
+        });*/
+        // Arrays.sort(names,( o1,  o2) -> o1.compareToIgnoreCase(o2));
+        // 特定类型的方法引用
+        Arrays.sort(names,String::compareToIgnoreCase);
+
+        System.out.println(Arrays.toString(names));
+    }
+}
+
+```
+4.  构造器引用  
+![img_135.png](img_135.png)  
+![img_136.png](img_136.png)  
