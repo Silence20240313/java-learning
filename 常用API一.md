@@ -1,8 +1,8 @@
 ##  常用API一    
 ###  Object类   
-![img_75.png](img_75.png)  
-![img_72.png](img_72.png)  
-![img_73.png](img_73.png)  
+![img_75.png](image2/img_75.png)  
+![img_72.png](image2/img_72.png)  
+![img_73.png](image2/img_73.png)  
 ```java 
 package com.itheima.api_object;
 
@@ -65,7 +65,7 @@ public class Student  {
 }
 
 ```
-![img_74.png](img_74.png)  
+![img_74.png](image2/img_74.png)  
 ```java
 package com.itheima.api_object;
 
@@ -150,12 +150,12 @@ public class User implements Cloneable {
     }
 }
 ```
-![img_76.png](img_76.png)  
-![img_77.png](img_77.png)  
+![img_76.png](image2/img_76.png)  
+![img_77.png](image2/img_77.png)  
 
 ###  Objecs   
-![img_78.png](img_78.png)  
-![img_79.png](img_79.png)  
+![img_78.png](image2/img_78.png)  
+![img_79.png](image2/img_79.png)  
 ```java
 package com.itheima.api_objects;
 
@@ -181,9 +181,9 @@ public class Test {
 
 ```
 ###  包装类    
-![img_80.png](img_80.png)  
-![img_83.png](img_83.png)  
-![img_84.png](img_84.png)  
+![img_80.png](image2/img_80.png)  
+![img_83.png](image2/img_83.png)  
+![img_84.png](image2/img_84.png)  
 ```java
 package com.itheima.integer;
 
@@ -235,7 +235,7 @@ public class Test {
 
 ```
 ###  StringBuilder   
-![img_86.png](img_86.png)  
+![img_86.png](image2/img_86.png)  
 ```java
 package com.itheima.stringBuilder;
 
@@ -268,7 +268,7 @@ public class Test {
 }
 
 ```
-![img_88.png](img_88.png)  
+![img_88.png](image2/img_88.png)  
 ```java
 package com.itheima.stringBuilder;
 
@@ -294,10 +294,10 @@ public class Test2 {
 
 ```
 ###  StringBuffer  
-![img_89.png](img_89.png)  
+![img_89.png](image2/img_89.png)  
 
 ###  案例  
-![img_90.png](img_90.png)  
+![img_90.png](image2/img_90.png)  
 ```java
 package com.itheima.stringBuilder;
 
@@ -331,8 +331,8 @@ public class Test3 {
 
 ```
 ###  StringJoiner  
-![img_92.png](img_92.png)  
-![img_93.png](img_93.png)  
+![img_92.png](image2/img_92.png)  
+![img_93.png](image2/img_93.png)  
 ```java
 package com.itheima.stringBuilder;
 
