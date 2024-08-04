@@ -3,7 +3,7 @@ public class ExceptionTest1 {
     public static void main(String[] args) throws AgeIllegalException {
         // 需求：保存一个合法的年龄
         try {
-            savaAge(23);
+            savaAge(160);
             System.out.println("底层执行成功");
         } catch (Exception e) {
             e.printStackTrace();
