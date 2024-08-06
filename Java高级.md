@@ -2,21 +2,21 @@
 
 ###  单元测试    
 1.  概述  
-![img_117.png](img_117.png)  
+![img_117.png](image3/img_117.png)  
 2.  Junit框架快速入门  
-![img_118.png](img_118.png)  
-![img_119.png](img_119.png)  
-![img_120.png](img_120.png)  
+![img_118.png](image3/img_118.png)  
+![img_119.png](image3/img_119.png)  
+![img_120.png](image3/img_120.png)  
 3.  Junit框架的常见注解  
-![img_121.png](img_121.png)  
-![img_123.png](img_123.png)  
-![img_122.png](img_122.png)  
+![img_121.png](image3/img_121.png)  
+![img_123.png](image3/img_123.png)  
+![img_122.png](image3/img_122.png)  
 
 ###  反射   
 1.  认识反射  
-![img_125.png](img_125.png)  
+![img_125.png](image3/img_125.png)  
 2.  获取类  
-![img_126.png](img_126.png)  
+![img_126.png](image3/img_126.png)  
 ```java
 package com.itheima.reflect;
 // TODO 获取class对象
@@ -37,7 +37,7 @@ public class Test1Class {
 
 ```  
 3.  获取类的构造器  
-![img_127.png](img_127.png)  
+![img_127.png](image3/img_127.png)  
 ```java
 package com.itheima.reflect;
 
@@ -78,10 +78,10 @@ public class Test2Constructor {
     }
 }
 ```
-![img_128.png](img_128.png)  
-![img_129.png](img_129.png)  
+![img_128.png](image3/img_128.png)  
+![img_129.png](image3/img_129.png)  
 4.  获取类的成员变量  
-![img_130.png](img_130.png)  
+![img_130.png](image3/img_130.png)  
 ```java
 package com.itheima.reflect;
 
@@ -111,10 +111,10 @@ public class Test3Field {
 }
 
 ```
-![img_131.png](img_131.png)  
-![img_132.png](img_132.png)  
+![img_131.png](image3/img_131.png)  
+![img_132.png](image3/img_132.png)  
 5.  获取类的成员方法  
-![img_133.png](img_133.png)  
+![img_133.png](image3/img_133.png)  
 ```java
 package com.itheima.reflect;
 // TODO 获取类的成员方法并对其进行操作
@@ -150,32 +150,89 @@ public class Test3Method {
 }
 
 ```
-![img_134.png](img_134.png)  
-![img_135.png](img_135.png)  
+![img_134.png](image3/img_134.png)  
+![img_135.png](image3/img_135.png)  
 6.  作用，应用场景
-![img_136.png](img_136.png)  
-![img_137.png](img_137.png)  
-![img_138.png](img_138.png)  
-![img_139.png](img_139.png)  
+![img_136.png](image3/img_136.png)  
+![img_137.png](image3/img_137.png)  
+![img_138.png](image3/img_138.png)  
+![img_139.png](image3/img_139.png)  
 
 ###  注解    
 1.  概述 自定义注解  
-![img_146.png](img_146.png)  
-![img_147.png](img_147.png)  
-![img_148.png](img_148.png)  
-![img_149.png](img_149.png)  
+![img_146.png](image3/img_146.png)  
+![img_147.png](image3/img_147.png)  
+![img_148.png](image3/img_148.png)  
+![img_149.png](image3/img_149.png)  
 2.  元注解  
-![img_152.png](img_152.png)  
-![img_151.png](img_151.png)  
+![img_152.png](image3/img_152.png)  
+![img_151.png](image3/img_151.png)  
 3.  注解的解析  
-![img_153.png](img_153.png)  
-
+![img_153.png](image3/img_153.png)  
+![img_154.png](image3/img_154.png)  
+![img_155.png](image3/img_155.png)  
 4.  应用场景  
+![img_156.png](image3/img_156.png)  
+```java
+package com.itheima.annotation;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
+// TODO 模拟Junit框架的设计
+public class AnnotationTest4 {
+    public void test1(){
+        System.out.println("---test1---");
+    }
+
+    @MyTest
+    public void test2(){
+        System.out.println("---test2---");
+    }
+
+    public void test3(){
+        System.out.println("---test3---");
+    }
+
+    @MyTest
+    public void test4(){
+        System.out.println("---test4---");
+    }
+
+    public static void main(String[] args) throws Exception {
+        AnnotationTest4 a = new AnnotationTest4();
+        // 启动程序
+        // 1.得到class对象
+        Class c = AnnotationTest4.class;
+        // 2.提取这个类中的全部成员方法
+        Method[] methods =  c.getDeclaredMethods();
+        // 3.遍历这个数组中的每个方法，看是否存在注解，存在触发该方法执行
+        for (Method method : methods) {
+            if (method.isAnnotationPresent(MyTest.class)){
+                // 说明当前方法上是存在MyTest注解，触发当前方法执行
+                method.invoke(a);
+            }
+        }
+    }
+}
+
+```
+```java
+package com.itheima.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD) // 只能注解方法
+@Retention(RetentionPolicy.RUNTIME) // 让当前注解可以一直存活着
+public @interface MyTest {
+
+}
+
+```
 ###  动态代理    
-![img_141.png](img_141.png)  
-![img_142.png](img_142.png)  
-![img_143.png](img_143.png)  
-
-
+![img_141.png](image3/img_141.png)  
+![img_142.png](image3/img_142.png)  
+![img_143.png](image3/img_143.png)  
