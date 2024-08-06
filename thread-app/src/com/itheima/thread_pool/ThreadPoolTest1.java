@@ -1,13 +1,19 @@
 package com.itheima.thread_pool;
-// TODO 线程池的创建
+
 import java.util.concurrent.*;
 public class ThreadPoolTest1 {
     public static void main(String[] args) throws Exception {
         // 1.通过ThreadPoolExecutor创建一个线程池对象
-        ExecutorService pool = new ThreadPoolExecutor(3,5,8,
+        /*ExecutorService pool = new ThreadPoolExecutor(3,5,8,
                 TimeUnit.SECONDS,new ArrayBlockingQueue<>(4),
-                Executors.defaultThreadFactory(),new ThreadPoolExecutor.CallerRunsPolicy());
+                Executors.defaultThreadFactory(),new ThreadPoolExecutor.CallerRunsPolicy());*/
 
+        // 1-2 通过Executors创建一个线程池对象
+        ExecutorService pool = Executors.newFixedThreadPool(3);
+        // 核心线程数量到底配置多少呢
+        // 计算密集型的任务：核心线程数量 = CPU的核数 + 1
+        // IO密集型的任务：核心线程数量 = CPU的核数 * 2
+        
         // 2.使用线程处理Callable任务
          Future<String> f1 = pool.submit(new MyCallable(100));
          Future<String> f2 = pool.submit(new MyCallable(200));
