@@ -142,9 +142,123 @@ public class FileTest4 {
 ```
 ###  方法递归  
 1.  递归的形式  
+![img_2.png](img_2.png)  
+![img_3.png](img_3.png)  
+```java
+package com.itheima.recursion;
 
+// TODO 递归的形式
+public class RecursionTest1 {
+    public static void main(String[] args) {
+        test1();
+    }
+
+    // 直接方法递归
+    public static void test1(){
+        System.out.println("-----test1------");
+        test1();// 直接方法递归
+    }
+
+    // 间接方法递归
+    public static void test2(){
+        System.out.println("-----test2------");
+        test3();
+    }
+
+    public static void test3(){
+        System.out.println("-----test3------");
+        test2();// 间接递归
+    }
+}
+
+```
 2.  应用，执行流程，算法思想  
-
+![img_4.png](img_4.png)  
+![img_5.png](img_5.png)   
+![img_6.png](img_6.png)  
 3.  文件搜索  
+![img_7.png](img_7.png)  
+```java
+package com.itheima.recursion;
+
+import java.io.File;
+
+// TODO 文件搜索的实现
+public class RecursionTest2 {
+    public static void main(String[] args) {
+        searchFile(new File("C:/"),"LINE.lnk");
+    }
+    // 去目录下搜索某个文件 dir 目录     fileName 要搜索的文件名称
+    public static void searchFile(File dir,String fileName){
+        // 1.把非法的情况都拦截住
+        if (dir == null || !dir.exists() || dir.isFile()){
+            return;// 代表无法搜索
+        }
+
+        // 2.dir不是null ,存在，一定是目录对象
+        // 获取当前目录下的全部一级文件对象
+        File[] files = dir.listFiles();
+
+        // 3.判断当前目录下是否存在一级文件对象，以及是否可以拿到一级文件对象
+        if (files != null && files.length > 0){
+            // 4.遍历全部一级文件对象
+            for (File f : files) {
+                // 5.判断文件是否是文件，还是文件夹
+                if (f.isFile()){
+                    // 是文件 判断文件名是否是我们要找的
+                    if (f.getName().contains(fileName)){
+                        System.out.println("找到了:" + f.getAbsolutePath());
+                    }
+                }else {
+                    // 是文件夹 继续重复这个过程（递归）
+                    searchFile(f,fileName);
+                }
+            }
+        }
+    }
+}
+
+```
+```java
+package com.itheima.demo;
+
+import java.io.File;
+
+public class Test1 {
+    public static void main(String[] args) {
+        // TODO 删除非空文件夹，独立功能独立成方法
+        File dir = new File("\u202AC:\\Users\\liang\\OneDrive\\デスクトップ\\test");
+        deleteDir(dir);
+    }
+    public static void deleteDir(File dir){
+       if (dir == null || !dir.exists()){
+          return;
+       }
+
+       if (dir.isFile()){
+           dir.delete();
+           return;
+       }
+
+       // 1. dir存在且是文件夹 拿里面的一级文件对象
+        File[] files = dir.listFiles();
+       if (files == null){
+           return;
+       }
+
+       // 2.这是一个有内容的文件夹 删除里面的内容再删除文件夹
+        for (File file : files) {
+            if (file.isFile()){
+                file.delete();
+            }else {
+                deleteDir(file);
+            }
+        }
+        dir.delete();
+    }
+}
+
+```
+
 
 
