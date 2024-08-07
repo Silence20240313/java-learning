@@ -259,6 +259,279 @@ public class Test1 {
 }
 
 ```
+###  字符集  
+1.  常见字符集  
+![img_9.png](img_9.png)  
+![img_10.png](img_10.png)  
+![img_11.png](img_11.png)  
+![img_12.png](img_12.png)  
+![img_13.png](img_13.png)  
+2.  字符集的编码，解码  
+![img_14.png](img_14.png)  
+![img_15.png](img_15.png)  
+```java
+package com.itheima.charset;
+
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+
+// TODO 使用java代码完成对字符的编码和解码
+public class Test {
+    public static void main(String[] args) throws Exception {
+        // 1.编码
+        String data = "a我b";
+        byte[] bytes = data.getBytes();// 默认是按照平台字符集进行编码的  UTF-8
+        System.out.println(Arrays.toString(bytes));
+
+        // 按照指定字符集进行编码
+        byte[] bytes1 = data.getBytes("GBK");
+        System.out.println(Arrays.toString(bytes1));
+
+        // 解码
+        String s1 = new String(bytes);// 按照平台默认编码UTF-8解码
+        System.out.println(s1);
+
+        String s2 = new String(bytes1,"GBK");
+        System.out.println(s2);
+    }
+}
+
+```
+###  IO流  
+![img_16.png](img_16.png)  
+![img_17.png](img_17.png)  
+![img_18.png](img_18.png)  
+1.  IO流-字节流  
+![img_20.png](img_20.png)  
+①文件字节输入流：每次读取一个字节  
+![img_21.png](img_21.png)  
+```java
+package com.itheima.byte_stream;
+// TODO 文件字节输入流：每次读取一个字节
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class FileInputStreamTest1 {
+    public static void main(String[] args) throws Exception {
+        // 1.创建文件字节输入流管道，与源文件接通
+        InputStream is = new FileInputStream(("file-io-app\\src\\itheima01.txt"));
+
+        // 2.开始读取文件的字节数据
+        // 每次读取一个字节返回，如果没有数据了，返回-1
+        // int b1 = is.read();
+        // System.out.println((char)b1); // a
+
+        // int b2 = is.read();
+        // System.out.println((char)b2); // b
+
+        // 3.使用循环改造上述代码
+        int b;// 用于记住读取的字节
+        while ((b = is.read())!= -1){
+            System.out.print((char) b);
+        }
+
+        // 读取数据的性能很差
+        // 读取汉字输出会乱码 无法避免
+        // 流使用完毕之后必须关闭，要释放系统资源
+        is.close();
+    }
+}
+
+```  
+②文件字节输入流：每次读取多个字节  
+![img_22.png](img_22.png)  
+```java
+package com.itheima.byte_stream;
+// TODO 文件字节输入流：每次读取多个字节
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class FileInputStreamTest2 {
+    public static void main(String[] args) throws Exception {
+        // 1.创建文件字节输入流管道，与源文件接通
+        InputStream is = new FileInputStream(("file-io-app\\src\\itheima02.txt"));
+
+        // 2.开始读取文件中的字节数据，每次读取多个字节
+        // 每次读取多个字节到字节数组中去，返回读取的字节数量，读取完毕会返回-1
+        /* byte[] buffer = new byte[3];
+        int len = is.read(buffer);
+        String rs = new String(buffer);
+        System.out.println(rs);// abc
+        System.out.println(len);// 当次读取的字节数量  3
+
+        int len2 = is.read(buffer);
+        String rs2 = new String(buffer,0,len2);
+        System.out.println(rs2);// 66
+        System.out.println(len2);// 当次读取的字节数量  2
+
+        int len3 = is.read(buffer);
+        System.out.println(len3);// -1 */
+
+        // 3.使用循环改造
+        byte[] buffer = new byte[3];
+        int len;// 记住每次读取了多少个字节
+        while ((len = is.read(buffer)) != -1){
+            // 注意：读取多少 倒出多少
+            String rs = new String(buffer,0,len);
+            System.out.print(rs);// abc66
+        }
+
+        // 性能得到了明显的提升
+        // 这种方案也不能避免读取汉字输出乱码的问题
+
+        is.close();// 关闭流
+    }
+}
+
+```
+③文件字节输入流：一次读取完全部字节  
+![img_23.png](img_23.png)  
+![img_25.png](img_25.png)  
+```java
+package com.itheima.byte_stream;
+// TODO 文件字节输入流：一次性读取完文件的全部字节
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class FileInputStreamTest3 {
+    public static void main(String[] args) throws Exception {
+        // 1.一次性读取完文件的全部字节到一个字节数组中去
+        // 创建文件字节输入流管道，与源文件接通
+        InputStream is = new FileInputStream(("file-io-app\\src\\itheima03.txt"));
+
+        // 2.准备一个字节数组，大小与文件的大小正好一样大
+        /*  File f = new File("file-io-app\\src\\itheima03.txt");
+        long size = f.length();
+        byte[] buffer = new byte[(int)size];
+
+        int len = is.read(buffer);
+        System.out.println(new String(buffer));
+
+        System.out.println(size);// 121
+        System.out.println(len);// 121  */
+
+        byte[] buffer = is.readAllBytes();
+        System.out.println(new String(buffer));
+    }
+}
+
+```  
+④文件字节输出流：写字节出去  
+![img_27.png](img_27.png)  
+```java
+package com.itheima.byte_stream;
+// TODO 文件字节输出流的使用
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+public class FileInputStreamTest4 {
+    public static void main(String[] args) throws Exception {
+        // 1.创建文件字节输入流管道，与源文件接通
+        // 覆盖管道，覆盖之前的数据
+        /* OutputStream os =
+                new FileOutputStream(("file-io-app\\src\\itheima04out.txt"));*/
+        // 追加数据的管道
+        OutputStream os =
+                new FileOutputStream("file-io-app\\src\\itheima04out.txt",true);
+        // 2.开始写字节数据出去了
+       os.write(97);// 97就是一个字节 代表a
+       os.write('b');// 'b'也是一个字节
+
+        byte[] bytes = "我爱你中国abc".getBytes();
+        os.write(bytes);
+
+        os.write(bytes,0,15);
+
+        // 换行符
+       os.write("\r\n".getBytes());
+
+        os.close();// 关闭流
+    }
+}
+
+```  
+2.  文件复制  
+![img_28.png](img_28.png)  
+![img_29.png](img_29.png)  
+```java
+package com.itheima.byte_stream;
+
+// TODO 使用字节流完成对文件的复制操作
+
+import java.io.*;
+
+public class CopyTest5 {
+    public static void main(String[] args) throws Exception {
+        // 需求：复制照片
+        // 1.创建文件字节输入流管道，与源文件接通
+        InputStream is = new FileInputStream(("C:\\Users\\liang\\OneDrive\\デスクトップ\\test\\1.jpg"));
+        // 2.创建一个字节输出流管道与目标文件接通
+        OutputStream os = new FileOutputStream("C:\\汪苏泷\\1.jpg");
+        // 3.创建一个字节数组，负责转移字节数据
+        byte[] buffer = new byte[1024];// 1kb
+        // 4.从字节输入流中读取字节数据，写出去到字节输出流中，读多少写出去多少
+        int len;// 记住每次读取了多少个字节
+        while ((len = is.read(buffer))!= -1){
+            os.write(buffer,0,len);
+        }
+        os.close();
+        is.close();
+        System.out.println("复制完成");
+    }
+}
+
+```  
+3.  释放资源的方式
+①try-catch-finally
+![img_30.png](img_30.png)  
+![img_31.png](img_31.png)  
+```java
+package com.itheima.resource;
+
+// TODO 认识 try-catch-finally
+public class Test1 {
+    public static void main(String[] args) {
+        try{
+            System.out.println(10/5);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            System.out.println("-----finally执行了一次-------");
+        }
+
+        System.out.println(chu(10,2));
+    }
+
+    public static int chu(int a,int b){
+        try {
+            return a/b;
+        }catch (Exception e){
+            e.printStackTrace();
+            return -1;// 代表出现异常
+        }finally {
+            // 千万不要在finally中返回数据
+        }
+    }
+}
+
+```
+②try-with-resource  
+![img_35.png](img_35.png)  
+![img_34.png](img_34.png)  
+
+
+
+
+
 
 
 
