@@ -1,19 +1,3 @@
-## IO流        
-
-###  IO流-转换流  
-![img_42.png](img_42.png)  
-
-
-
-
-
-
-###  IO框架  
-![img_36.png](img_36.png)  
-![img_37.png](img_37.png)  
-![img_38.png](img_38.png)  
-![img_41.png](img_41.png)  
-```java
 package com.itheima.transform_stream;
 
 import java.io.BufferedReader;
@@ -38,8 +22,3 @@ public class Test1 {
         }
     }
 }
-
-```
-
-
-
