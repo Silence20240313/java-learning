@@ -2,7 +2,7 @@
 
 ###  IO流-字符流   
 1.  文件字符输入流-读字符数据进来    
-![img_43.png](img_43.png)  
+![img_43.png](image4/img_43.png)  
 ```java
 package com.itheima.char_stream;
 
@@ -41,7 +41,7 @@ public class FileReaderTest1 {
 
 ```  
 2.  文件字符输出流-写字符数据出去  
-![img_44.png](img_44.png)  
+![img_44.png](image4/img_44.png)  
 ```java
 package com.itheima.char_stream;
 
@@ -86,7 +86,7 @@ public class FileWriterTest2 {
 }
 
 ```
-![img_46.png](img_46.png)  
+![img_46.png](image4/img_46.png)  
 ```java
 package com.itheima.char_stream;
 
@@ -117,21 +117,21 @@ public class FileWriterTest3 {
 ```
 
 ###  IO流-缓冲流  
-![img_48.png](img_48.png)  
+![img_48.png](image4/img_48.png)  
 1.  字节缓冲流  
-![img_49.png](img_49.png)  
-![img_50.png](img_50.png)  
-![img_51.png](img_51.png)  
+![img_49.png](image4/img_49.png)  
+![img_50.png](image4/img_50.png)  
+![img_51.png](image4/img_51.png)  
 2.  字符缓冲流  
-![img_53.png](img_53.png)  
-![img_55.png](img_55.png)  
-![img_56.png](img_56.png)  
-![img_57.png](img_57.png)  
-![img_58.png](img_58.png)  
+![img_53.png](image4/img_53.png)  
+![img_55.png](image4/img_55.png)  
+![img_56.png](image4/img_56.png)  
+![img_57.png](image4/img_57.png)  
+![img_58.png](image4/img_58.png)  
 
 ###  IO流-转换流  
 1.  字符输入转换流  
-![img_60.png](img_60.png)  
+![img_60.png](image4/img_60.png)  
 ```java
 package com.itheima.transform_strea;
 // TODO 字符输入转换流的作用
@@ -160,8 +160,8 @@ public class InputStreamReaderTest2 {
 }
 ```  
 2.  字符输出转换流  
-![img_61.png](img_61.png)  
-![img_62.png](img_62.png)  
+![img_61.png](image4/img_61.png)  
+![img_62.png](image4/img_62.png)  
 ```java
 package com.itheima.transform_strea;
 // TODO 字符输出转换流的作用
@@ -188,7 +188,7 @@ public class OutputStreamWriterTest3 {
     }
 }
 ```  
-![img_42.png](img_42.png)   
+![img_42.png](image4/img_42.png)   
 ```java
 package com.itheima.transform_stream;
 
@@ -217,9 +217,9 @@ public class Test1 {
 ```
 
 ###  IO流-打印流  
-![img_64.png](img_64.png)  
-![img_65.png](img_65.png)  
-![img_66.png](img_66.png)  
+![img_64.png](image4/img_64.png)  
+![img_65.png](image4/img_65.png)  
+![img_66.png](image4/img_66.png)  
 ```java
 package com.itheima.printstream;
 
@@ -255,7 +255,7 @@ public class PrintTest1 {
     }
 }
 ```
-![img_68.png](img_68.png)  
+![img_68.png](image4/img_68.png)  
 ```java
 package com.itheima.printstream;
 
@@ -287,7 +287,7 @@ public class PrintTest2 {
 ```
 
 ###  IO流-数据流  
-![img_69.png](img_69.png)  
+![img_69.png](image4/img_69.png)  
 ```java
 package com.itheima.data_stream;
 
@@ -313,7 +313,7 @@ public class DataOutputStreamTest1 {
     }
 }
 ```
-![img_70.png](img_70.png)  
+![img_70.png](image4/img_70.png)  
 ```java
 package com.itheima.data_stream;
 
@@ -350,8 +350,8 @@ public class DataInputStreamTest2 {
 ```
 
 ###  IO流-序列化流  
-![img_72.png](img_72.png)  
-![img_75.png](img_75.png)  
+![img_72.png](image4/img_72.png)  
+![img_75.png](image4/img_75.png)  
 ```java
 package com.itheima.object_stream;
 
@@ -380,7 +380,7 @@ public class Test1ObjectOutputStream {
     }
 }
 ```
-![img_74.png](img_74.png)  
+![img_74.png](image4/img_74.png)  
 ```java
 package com.itheima.object_stream;
 
@@ -406,13 +406,13 @@ public class Test2ObjectInputStream {
 }
 
 ```
-![img_76.png](img_76.png)  
+![img_76.png](image4/img_76.png)  
 
 ###  IO框架  
-![img_36.png](img_36.png)  
-![img_37.png](img_37.png)  
-![img_38.png](img_38.png)  
-![img_41.png](img_41.png)  
+![img_36.png](image4/img_36.png)  
+![img_37.png](image4/img_37.png)  
+![img_38.png](image4/img_38.png)  
+![img_41.png](image4/img_41.png)  
 
 
 

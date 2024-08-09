@@ -79,7 +79,7 @@ public class FileTest2 {
 
 ```  
 3.  方法2：创建文件，删除文件  
-![img.png](img.png)  
+![img.png](image4/img.png)  
 ```java
 package com.itheima.file;
 // TODO   File创建和删除文件相关的方法
@@ -108,7 +108,7 @@ public class FileTest3 {
 
 ```
 4.  方法3：遍历文件夹  
-![img_1.png](img_1.png)  
+![img_1.png](image4/img_1.png)  
 ```java
 package com.itheima.file;
 // TODO   File提供的遍历文件夹的方法
@@ -142,8 +142,8 @@ public class FileTest4 {
 ```
 ###  方法递归  
 1.  递归的形式  
-![img_2.png](img_2.png)  
-![img_3.png](img_3.png)  
+![img_2.png](image4/img_2.png)  
+![img_3.png](image4/img_3.png)  
 ```java
 package com.itheima.recursion;
 
@@ -173,11 +173,11 @@ public class RecursionTest1 {
 
 ```
 2.  应用，执行流程，算法思想  
-![img_4.png](img_4.png)  
-![img_5.png](img_5.png)   
-![img_6.png](img_6.png)  
+![img_4.png](image4/img_4.png)  
+![img_5.png](image4/img_5.png)   
+![img_6.png](image4/img_6.png)  
 3.  文件搜索  
-![img_7.png](img_7.png)  
+![img_7.png](image4/img_7.png)  
 ```java
 package com.itheima.recursion;
 
@@ -261,14 +261,14 @@ public class Test1 {
 ```
 ###  字符集  
 1.  常见字符集  
-![img_9.png](img_9.png)  
-![img_10.png](img_10.png)  
-![img_11.png](img_11.png)  
-![img_12.png](img_12.png)  
-![img_13.png](img_13.png)  
+![img_9.png](image4/img_9.png)  
+![img_10.png](image4/img_10.png)  
+![img_11.png](image4/img_11.png)  
+![img_12.png](image4/img_12.png)  
+![img_13.png](image4/img_13.png)  
 2.  字符集的编码，解码  
-![img_14.png](img_14.png)  
-![img_15.png](img_15.png)  
+![img_14.png](image4/img_14.png)  
+![img_15.png](image4/img_15.png)  
 ```java
 package com.itheima.charset;
 
@@ -298,13 +298,13 @@ public class Test {
 
 ```
 ###  IO流  
-![img_16.png](img_16.png)  
-![img_17.png](img_17.png)  
-![img_18.png](img_18.png)  
+![img_16.png](image4/img_16.png)  
+![img_17.png](image4/img_17.png)  
+![img_18.png](image4/img_18.png)  
 1.  IO流-字节流  
-![img_20.png](img_20.png)  
+![img_20.png](image4/img_20.png)  
 ①文件字节输入流：每次读取一个字节  
-![img_21.png](img_21.png)  
+![img_21.png](image4/img_21.png)  
 ```java
 package com.itheima.byte_stream;
 // TODO 文件字节输入流：每次读取一个字节
@@ -342,7 +342,7 @@ public class FileInputStreamTest1 {
 
 ```  
 ②文件字节输入流：每次读取多个字节  
-![img_22.png](img_22.png)  
+![img_22.png](image4/img_22.png)  
 ```java
 package com.itheima.byte_stream;
 // TODO 文件字节输入流：每次读取多个字节
@@ -389,8 +389,8 @@ public class FileInputStreamTest2 {
 
 ```
 ③文件字节输入流：一次读取完全部字节  
-![img_23.png](img_23.png)  
-![img_25.png](img_25.png)  
+![img_23.png](image4/img_23.png)  
+![img_25.png](image4/img_25.png)  
 ```java
 package com.itheima.byte_stream;
 // TODO 文件字节输入流：一次性读取完文件的全部字节
@@ -423,7 +423,7 @@ public class FileInputStreamTest3 {
 
 ```  
 ④文件字节输出流：写字节出去  
-![img_27.png](img_27.png)  
+![img_27.png](image4/img_27.png)  
 ```java
 package com.itheima.byte_stream;
 // TODO 文件字节输出流的使用
@@ -460,8 +460,8 @@ public class FileInputStreamTest4 {
 
 ```  
 2.  文件复制  
-![img_28.png](img_28.png)  
-![img_29.png](img_29.png)  
+![img_28.png](image4/img_28.png)  
+![img_29.png](image4/img_29.png)  
 ```java
 package com.itheima.byte_stream;
 
@@ -492,8 +492,8 @@ public class CopyTest5 {
 ```  
 3.  释放资源的方式
 ①try-catch-finally
-![img_30.png](img_30.png)  
-![img_31.png](img_31.png)  
+![img_30.png](image4/img_30.png)  
+![img_31.png](image4/img_31.png)  
 ```java
 package com.itheima.resource;
 
@@ -525,8 +525,8 @@ public class Test1 {
 
 ```
 ②try-with-resource  
-![img_35.png](img_35.png)  
-![img_34.png](img_34.png)  
+![img_35.png](image4/img_35.png)  
+![img_34.png](image4/img_34.png)  
 
 
 
