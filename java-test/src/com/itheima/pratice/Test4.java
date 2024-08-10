@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class test4 {
+public class Test4 {
     @Test
     public void demo4(){
         // TODO 调用方法测试
@@ -54,7 +54,6 @@ public class test4 {
 
     // TODO ②运用switch判断
     private int calcute2(char operator,int number1,int number2){
-
         switch (operator){
             case '+':
                 return number1 + number2;
@@ -81,7 +80,7 @@ public class test4 {
         } else if (score >= 80 && score <= 100) {
             return "优秀";
         }
-        return "不合法";
+        return "不合法";// 以上条件均不满足
     }
 
     // TODO 方法三：判断输入的字符是否在a-z之间，若在返回true，反之false
@@ -106,6 +105,7 @@ public class test4 {
         String[] arr = new String[n];
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0){
+                // i是索引
                 arr[i] = "孙悟空";
             } else {
                 arr[i] = "猪八戒";
@@ -119,6 +119,7 @@ public class test4 {
         String[] result = new String[arr.length];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0){
+                // arr[i]是数组里的值
                 result[i] = "偶数";
             } else {
                 result[i] = "奇数";

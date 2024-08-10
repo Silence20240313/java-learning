@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class test3 {
+public class Test3 {
     @Test
     public void demo3(){
         // TODO 定义一个静态字符串数组

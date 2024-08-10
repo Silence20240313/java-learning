@@ -2,7 +2,7 @@ package com.itheima.pratice;
 
 import org.junit.Test;
 
-public class test2 {
+public class Test2 {
     @Test
     public void demo2(){
         // TODO 运用switch循环
@@ -63,13 +63,14 @@ public class test2 {
 
         // TODO 运用while循环 计算从1加到30的奇数和，遇见偶数时continue
         int j = 0;
-        int sum3 = 0;
+        int sum3 = 0; // 0 1
         while (j <= 30) {
             if (j % 2 == 0){
                 j++;
                 continue;
             }
-            sum3 += j++;
+            sum3 += j;
+            ++j;
         }
         System.out.println("1-30的奇数和为：" + sum3);
 

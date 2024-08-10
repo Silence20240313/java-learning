@@ -13,8 +13,13 @@ git config --global credential.helper store
 # 4.查看git的配置信息
 git config --global --list
 ```
+![img_1.png](img_1.png)  
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)  
+![img_4.png](img_4.png)  
+![img_5.png](img_5.png)
 
-###  新建仓库  
-```shell
-# 1.
-```
+
+
+重点图片
+![img_6.png](img_6.png)
