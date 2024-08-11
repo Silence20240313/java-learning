@@ -1,4 +1,4 @@
-package com.itheima.pratice;
+package com.itheima.pratice.MXDX;
 
 public class Teacher {
     private String name;

@@ -1,4 +1,4 @@
-package com.itheima.pratice;
+package com.itheima.pratice.STATIC;
 
 public class Animal {
     private String name;

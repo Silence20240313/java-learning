@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class Test4 {
+public class FangFa {
     @Test
     public void demo4(){
         // TODO 调用方法测试
@@ -37,6 +37,8 @@ public class Test4 {
     // TODO 方法一：定义一个char类型的变量，两个int类型变量
     //      char是 + - * / %  那两个int变量就进行相应的操作  都不满足则输出-1
     //      ①运用if分支判断
+    //  方法格式：修饰符 返回值类型 方法名 (形参){方法体}
+    //  （有返回值类型就有return）
     private int calcute(char operator,int number1,int number2) {
         if (operator == '+') {
             return number1 + number2;
@@ -53,21 +55,29 @@ public class Test4 {
     }
 
     // TODO ②运用switch判断
+    //   case后面是冒号：
     private int calcute2(char operator,int number1,int number2){
+        int result = 0;
         switch (operator){
             case '+':
-                return number1 + number2;
+                result = number1 + number2;
+                break;
             case '-':
-                return number1 - number2;
+                result = number1 - number2;
+                break;
             case '*':
-                return number1 * number2;
+                result = number1 * number2;
+                break;
             case '/':
-                return number1 / number2;
+                result = number1 / number2;
+                break;
             case '%':
-                return number1 % number2;
+                result = number1 % number2;
+                break;
             default:
-                return -1;// 以上条件均不满足
+                result = -1;// 以上条件均不满足
         }
+        return result;
     }
 
     // TODO 方法二：判断分数，输出相应评价
@@ -75,6 +85,7 @@ public class Test4 {
     private String judgeScore(double score){
         if (score >= 0 && score < 60){
             return "不合格";
+            // 使用return,而不是sout
         } else if (score >= 60 && score <= 79) {
             return "良好";
         } else if (score >= 80 && score <= 100) {
@@ -84,6 +95,7 @@ public class Test4 {
     }
 
     // TODO 方法三：判断输入的字符是否在a-z之间，若在返回true，反之false
+    //  注意：字符单引号''
     private boolean judge(char ch){
         if (ch >= 'a' && ch <= 'z'){
             return true;
@@ -93,8 +105,11 @@ public class Test4 {
 
     // TODO 方法四： 返回int类型数组，长度为形参的n,值是1-n
     private int[] length(int n){
+        // 定义一个长度为n的数组（动态）
         int[] arr = new int[n];
+        // 遍历这个新数组
         for (int i = 0; i < arr.length; i++) {
+            // 索引为0处的位置数值是1，为1处的位置数值是2  位置处的数值=索引+1
             arr[i] = i + 1;
         }
         return arr;

@@ -1,8 +1,10 @@
 package com.itheima.pratice;
 
+import com.itheima.pratice.MXDX.Student;
+import com.itheima.pratice.MXDX.Teacher;
 import org.junit.Test;
 
-public class Test5 {
+public class MianXiangDuiXiang {
     @Test
     public void demo5(){
         // TODO new一个学生类s1出来并赋予相关信息

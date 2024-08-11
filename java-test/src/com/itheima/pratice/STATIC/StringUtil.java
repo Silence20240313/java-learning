@@ -1,4 +1,4 @@
-package com.itheima.pratice;
+package com.itheima.pratice.STATIC;
 
 public class StringUtil {
     public static boolean isValid(String s){

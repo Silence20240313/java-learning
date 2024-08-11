@@ -13,13 +13,15 @@ git config --global credential.helper store
 # 4.查看git的配置信息
 git config --global --list
 ```
-![img_1.png](img_1.png)  
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)  
-![img_4.png](img_4.png)  
-![img_5.png](img_5.png)
 
 
+8.12计划：（5个文档）
+1.  API1  
+2.  API2  
+3.  冒泡  
+4.  框架1  
+5.  框架2
+ 
 
 重点图片
 ![img_6.png](img_6.png)

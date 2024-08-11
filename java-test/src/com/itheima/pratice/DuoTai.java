@@ -1,8 +1,11 @@
 package com.itheima.pratice;
 
+import com.itheima.pratice.DT.Action;
+import com.itheima.pratice.DT.Parents;
+import com.itheima.pratice.DT.People;
 import org.junit.Test;
 
-public class Test8 {
+public class DuoTai {
     @Test
     public void demo8(){
         // TODO 多态

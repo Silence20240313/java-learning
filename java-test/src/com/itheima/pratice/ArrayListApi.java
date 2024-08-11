@@ -2,7 +2,7 @@ package com.itheima.pratice;
 
 import java.util.ArrayList;
 
-public class Test6_2 {
+public class ArrayListApi {
     public static void main(String[] args) {
         // TODO 1.创建一个ArrayList的集合对象
         ArrayList<String> list = new ArrayList<>();

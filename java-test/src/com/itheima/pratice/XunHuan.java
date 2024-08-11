@@ -2,15 +2,15 @@ package com.itheima.pratice;
 
 import org.junit.Test;
 
-public class Test2 {
+public class XunHuan {
     @Test
     public void demo2(){
-        // TODO 运用switch循环
+        // TODO 运用switch循环(case后面冒号)
         String week = "周五";
         switch (week) {
             case "周一":
                 System.out.println("今天是周一");
-                break;
+                break;//  break:跳出这个switch循环    continue:跳出当次循环
             case "周二":
                 System.out.println("今天是周二");
                 break;
@@ -54,16 +54,16 @@ public class Test2 {
         int sum2 = 0;
         while (i <= 20) {
             sum2 += i;
-            i++;
             if (sum2 > 50){
                 break;
             }
+            i++;
         }
         System.out.println("当前和为" + sum2);
 
         // TODO 运用while循环 计算从1加到30的奇数和，遇见偶数时continue
         int j = 0;
-        int sum3 = 0; // 0 1
+        int sum3 = 0;
         while (j <= 30) {
             if (j % 2 == 0){
                 j++;
@@ -84,9 +84,18 @@ public class Test2 {
         System.out.println("--------------------------------------");
 
         // TODO 循环嵌套：运用while循环 输出9遍 汪苏泷
-        int u = 0;
+        //  while循环的格式：
+        /*
+        初始化语句；
+        while（循环条件）{
+              被重复执行的代码；
+              迭代语句；
+          }
+        */
+
+        int u = 0;// 先定义初始值
         while (u <= 2){
-            int t = 0;
+            int t = 0;// 先定义初始值
             while (t <= 2) {
                 System.out.println("汪苏泷");
                 t++;

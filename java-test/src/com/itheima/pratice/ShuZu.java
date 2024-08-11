@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class Test3 {
+public class ShuZu {
     @Test
     public void demo3(){
         // TODO 定义一个静态字符串数组
@@ -49,6 +49,7 @@ public class Test3 {
         //        0  1 2  3 4
         for (int i = 0; i < n.length; i++) {
             if (n[i] % 2 == 0){
+                // n[i]:代表数组里的数值   i：代表数组的索引
                 continue;
             }
             System.out.println(n[i]);

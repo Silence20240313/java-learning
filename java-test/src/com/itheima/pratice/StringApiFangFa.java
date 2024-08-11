@@ -2,7 +2,7 @@ package com.itheima.pratice;
 
 import org.junit.Test;
 
-public class Test6_33 {
+public class StringApiFangFa {
     @Test
     public void demo6(){
        // TODO 定义字符串

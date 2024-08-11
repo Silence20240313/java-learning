@@ -1,8 +1,10 @@
 package com.itheima.pratice;
 
+import com.itheima.pratice.STATIC.Cat;
+import com.itheima.pratice.STATIC.StringUtil;
 import org.junit.Test;
 
-public class Test7 {
+public class StaticFangFa {
     @Test
     public void demo7(){
        Cat c = new Cat();

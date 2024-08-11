@@ -2,7 +2,7 @@ package com.itheima.pratice;
 
 import org.junit.Test;
 
-public class Test1 {
+public class BianLiang {
     @Test
     public void demo1(){
         // TODO 定义一个年龄变量，赋值25并输出。把年龄变更为30并输出
@@ -55,8 +55,8 @@ public class Test1 {
             }
         }
 
-        // TODO  ①身高 > 1.9 并且 体重 > 80 满足其一     --- 校队
-        //       ②身高 > 1.9 并且 体重 < 80 两个条件都满足--- 回家
+        // TODO  ①身高 > 1.9 并且 体重 >= 80  --- 校队
+        //       ②身高 > 1.9 并且 体重 < 80  --- 回家
         //       ③其他-种地
         if (height > 1.9) {
             if (weight >= 80) {
@@ -87,14 +87,16 @@ public class Test1 {
         int number2 = 2;
         if (operator == '+') {
             System.out.println(number1 + number2);
-        } else if (operator == '-') {
+        } else if(operator == '-') {
             System.out.println(number1 - number2);
-        }else if (operator == '*') {
+        } else if(operator == '*') {
             System.out.println(number1 * number2);
-        }else if (operator == '/') {
+        } else if(operator == '/') {
             System.out.println(number1 / number2);
-        }else {
+        } else if(operator == '%') {
             System.out.println(number1 % number2);
+        } else {
+            System.out.println("您输入的字符有问题");
         }
 
         // TODO  定义两个字符类型的变量   一个num并赋予初始值
