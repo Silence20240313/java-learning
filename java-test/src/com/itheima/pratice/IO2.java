@@ -8,10 +8,10 @@ import java.io.OutputStream;
 public class IO2 {
     public static void main(String[] args)throws Exception {
         // TODO IO流:读写数据
-        //  输入(input)：外部内容读取到程序中来
-        //  输出(output)：在程序中把数据写出去
+        //  输入(input)：读取外部文件到这个类中来
+        //  输出(output)：在程序中把数据写出去，数据会自动生成到文件中（不需要自己去建文件）
 
-        // TODO ②字节-输出流：FileOutputStream
+        // TODO ②字节-输出流：FileOutputStream     复制！！！！！！
         //  需求：复制照片（从C盘汪苏泷文件夹复制一张照片到演唱会文件夹）
         // 1.创建文件字节输入流管道，与源文件接通
         InputStream is = new FileInputStream(("C:\\汪苏泷\\1.jpg"));// 旧 从哪儿拷贝
@@ -22,7 +22,9 @@ public class IO2 {
         // 4.从字节输入流中读取字节数据，写出去到字节输出流中，读多少写出去多少
         int len;// 记住每次读取了多少个字节
         while ((len = is.read(buffer))!= -1){
+            // is.read 从旧管道里面读取字节
             os.write(buffer,0,len);
+            // os.write 把字节写到新管道里面
         }
         os.close();
         is.close();

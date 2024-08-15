@@ -9,6 +9,7 @@ public class IO4 {
         //  输出(output)：在程序中把数据写出去
 
         // TODO ④字符-输出流：FileWriter
+        //  写数据出去，数据会自动生成到文件中（不需要自己去建文件）
         try(
                 // 0.创建一个文件字符输出流管道与目标文件接通（目标文件自动生成）
                 Writer fw = new FileWriter("io-app2\\src\\itheima20out.txt",true);

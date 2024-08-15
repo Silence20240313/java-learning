@@ -9,10 +9,11 @@ public class IO6 {
         //  输出(output)：在程序中把数据写出去
 
         // TODO ⑥字符缓冲输入流：BufferedReader
+        //  用了try-catch 就不用写关闭流的操作了
         try(
-                Reader fr = new FileReader("io-app2\\src\\itheima04.txt");
+                Reader fr = new FileReader("io-app2\\src\\itheima04.txt");// Reader 已有的
                 // 创建一个字符缓冲输入流包装原始的字符输入流
-                BufferedReader br = new BufferedReader(fr);
+                Reader br = new BufferedReader(fr);
         ){
             char[] buffer = new char[3];
             int len;

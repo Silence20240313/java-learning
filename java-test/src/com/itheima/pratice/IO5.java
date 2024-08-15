@@ -11,11 +11,11 @@ public class IO5 {
         // TODO ⑤字节缓冲流：BufferedInputStream/BufferedOutputStream
         try(
                 // TODO  复制文件：把itheima01.txt里的内容复制一份，复制到itheima01_bak.txt里面
-                InputStream is = new FileInputStream("io-app2\\src\\itheima01.txt");
+                InputStream is = new FileInputStream("io-app2\\src\\itheima01.txt");// 已有的文件和内容
                 // 1.定义一个字节缓冲输入流包装原始的字节输入流
                 InputStream bis = new BufferedInputStream(is);
 
-                OutputStream os = new FileOutputStream("io-app2\\src\\itheima01_bak.txt");
+                OutputStream os = new FileOutputStream("io-app2\\src\\itheima01_bak.txt");// 不需要自己建这个文件
                 // 2.定义一个字节缓冲输出流包装原始的字节输出流
                 OutputStream bos = new BufferedOutputStream(os);
                 ) {
