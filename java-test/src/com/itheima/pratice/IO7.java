@@ -5,8 +5,8 @@ import java.io.*;
 public class IO7 {
     public static void main(String[] args){
         // TODO IO流:读写数据
-        //  输入(input)：外部内容读取到程序中来
-        //  输出(output)：在程序中把数据写出去
+        //  输入(input)：读取外部文件到这个类中来
+        //  输出(output)：在程序中把数据写出去，数据会自动生成到文件中（不需要自己去建文件）
 
         // TODO ⑦字符缓冲输出流：BufferedWriter
         //   写字符到itheima30out.txt中去

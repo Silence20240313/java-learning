@@ -8,7 +8,7 @@ public class GJTest {
     // TODO 测试方法
     //   测试方法上必须声明@Test注解
     //   为业务方法，编写对应的测试方法（必须：公共 无参 无返回值）
-    //   在测试方法中，调用被测试的方法进行测试
+    //   在测试方法中，调用被测试的方法进行测试（类名.方法名（参数））
     @Test
     public void  testlength(){
         int nullLength = GAOJI.length(null);

@@ -10,7 +10,7 @@ public class KuangJia2 {
         // TODO Map:键值对
         //   HashMap：无序 不重复 无索引
         Map<String, String> map = new HashMap<>();
-        map.put("张三", "张三");
+        map.put("张三", "张三");// 添加数据
         map.put("李四", "李四");
         System.out.println(map.size());// 2
         System.out.println(map.isEmpty());// false
