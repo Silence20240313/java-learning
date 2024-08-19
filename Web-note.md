@@ -12,23 +12,29 @@ alt+b 打开浏览器
 ![img_17.png](img_17.png)  
 ![img_18.png](img_18.png)  
 ![img_19.png](img_19.png)  
-
-
+![img_20.png](img_20.png)  
+![img_21.png](img_21.png)  
 
 3.超链接
+![img_22.png](img_22.png)  
+![img_23.png](img_23.png)  
+
+
+正文
+1.正文排版
+![img_25.png](img_25.png)  
+![img_26.png](img_26.png)  
+
+
+
+2.页面布局
+ 
 
 
 
 
 
 
-8.19 开始web
-8.20 
-8.21 
-8.22 
-8.23 
-8.24 复习考试内容
-8.25 
 
 
 
