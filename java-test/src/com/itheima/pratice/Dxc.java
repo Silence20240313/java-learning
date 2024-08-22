@@ -16,8 +16,8 @@ public class Dxc {
         //   ②子类中重写run方法
         //   ③测试类中创建子类对象
         //   ④启动线程：子类对象.start()
-        Thread t = new Dxc1();
-        t.start();
+        Thread t = new Dxc1(); // 多态写法
+        t.start(); //  启动线程
 
         System.out.println("111主线程main方法执行啦！");
 

@@ -15,7 +15,7 @@ public class BianLiang {
         String a = age <= 50 ? "青年" : "老年";
         System.out.println(a);
 
-        // TODO 声明字符及成绩变量，并用if判断属于哪个级别
+        // TODO 声明字符及成绩变量，并用if判断属于哪个级别  if-else if-else
         char c = 'A';
         char c1 = 'B';
         short score = 20;
