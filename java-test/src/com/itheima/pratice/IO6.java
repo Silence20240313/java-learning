@@ -11,7 +11,7 @@ public class IO6 {
         // TODO ⑥字符缓冲输入流：BufferedReader
         //  用了try-catch 就不用写关闭流的操作了
         try(
-                Reader fr = new FileReader("io-app2\\src\\itheima04.txt");// Reader 已有的
+                Reader fr = new FileReader("io-app2\\src\\itheima04.txt");// Reader 读取已有的
                 // 创建一个字符缓冲输入流包装原始的字符输入流
                 Reader br = new BufferedReader(fr);
         ){

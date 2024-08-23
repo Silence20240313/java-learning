@@ -24,6 +24,8 @@ public class StringApi {
         for (int i = 0; i < chars.length; i++) {
             System.out.println(chars[i]);// 黑马Java
         }
+        // toCharArray():将字符串中的每一个字符转换为字符数组中的一个元素。
+        // 字符串是 "hello"，那么 toCharArray() 将返回一个包含 {'h', 'e', 'l', 'l', 'o'} 的字符数组。
         System.out.println("--------");
 
         // TODO 4.判断字符串内容，内容一样就返回true
@@ -40,7 +42,8 @@ public class StringApi {
 
         // TODO 6.截取字符串内容
         String s3 = "Java是最好的编程语言之一";
-        String rs = s3.substring(0,8);// 1-8
+        String rs = s3.substring(0,8);//  substring:提取字符串
+        // 提取索引为0到索引为7之间的字符串。
         System.out.println(rs);// Java是最好的
 
         // TODO 7.从当前索引位置一直截取到字符串的末尾
@@ -49,7 +52,7 @@ public class StringApi {
 
         // TODO 8.把字符串中的某个内容替换成新内容，并返回新的字符串对象给我们
         String info = "这个电影简直是个垃圾，垃圾电影";
-        String rs3 =info.replace("垃圾","**");
+        String rs3 =info.replace("垃圾","**");//replace: 替换
         System.out.println(rs3);// 这个电影简直是个**，**电影
 
         // TODO 9.判断字符串中是否包含某个关键字
@@ -65,6 +68,8 @@ public class StringApi {
         String[] names = rs5.split(",");// 按照逗号去分割内容
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
+            // split:用于根据指定的正则表达式将字符串拆分成多个子字符串，并返回一个字符串数组。
+            //在这个例子中，正则表达式是 ","，表示以逗号为分隔符。
             // 汪苏泷
             //魏大勋
             // 李宇春

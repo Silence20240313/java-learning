@@ -7,6 +7,11 @@ public class IO1 {
         // TODO IO流:读写数据
         //  输入(input)：读取外部文件到这个类中来
         //  输出(output)：在程序中把数据写出去，数据会自动生成到文件中（不需要自己去建文件）
+        //  用完流都需要关闭流
+        //  字节输入流：FileInputStream           字节输出流：FileOutputStream
+        //  字符输入流：FileReader                字符输出流：FileWriter
+        //  字节缓冲输入流：BufferedInputStream   字节缓冲输出流：BufferedOutputStream
+        //  字符缓冲输入流：BufferedReader        字符缓冲输出流：BufferedWriter
 
         // TODO ①字节-输入流：FileInputStream   读取文件！！！！！！
         //      首先需要准备一个txt文件（C盘）

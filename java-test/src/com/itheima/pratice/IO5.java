@@ -8,7 +8,7 @@ public class IO5 {
         //  输入(input)：读取外部文件到这个类中来
         //  输出(output)：在程序中把数据写出去，数据会自动生成到文件中（不需要自己去建文件）
 
-        // TODO ⑤字节缓冲流：BufferedInputStream/BufferedOutputStream
+        // TODO ⑤字节输入/输出缓冲流：BufferedInputStream/BufferedOutputStream
         try(
                 // TODO  复制文件：把itheima01.txt里的内容复制一份，复制到itheima01_bak.txt里面
                 InputStream is = new FileInputStream("io-app2\\src\\itheima01.txt");// 已有的文件和内容

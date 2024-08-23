@@ -10,7 +10,7 @@ public class KuangJia2 {
         // TODO Map:键值对
         //   HashMap：无序 不重复 无索引
         Map<String, String> map = new HashMap<>();
-        map.put("张三", "张三");// 添加数据
+        map.put("张三", "张三");// put:添加数据
         map.put("李四", "李四");
         System.out.println(map.size());// 2
         System.out.println(map.isEmpty());// false
@@ -21,12 +21,13 @@ public class KuangJia2 {
         System.out.println(map);// {张三=张三01}
 
         // TODO 遍历1
-        Set<String> keys = map.keySet();// 获取集合的全部键
+        Set<String> keys = map.keySet();// 获取集合的全部键 keySet
         System.out.println(keys);// 张三
         // 遍历全部键
         for (String k : keys){
-            //根据键盘获取对应的值
+            //根据键获取对应的值
             String value = map.get(k);
+            // get:在 Map 中根据键获取对应的值
             System.out.println(k + "---->" + value);// 张三---->张三01
         }
 

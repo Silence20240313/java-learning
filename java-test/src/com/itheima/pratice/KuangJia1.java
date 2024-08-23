@@ -12,7 +12,7 @@ public class KuangJia1 {
         // TODO Collection：单列  （ArrayList，HashSet）
         // TODO ArrayList框架：有序 可重复 有索引
         ArrayList<Long> list = new ArrayList<>();
-        list.add(5l);
+        list.add(5l);// add 添加元素
         list.add(10l);
         list.add(15l);
         list.add(20l);
@@ -32,6 +32,7 @@ public class KuangJia1 {
         for (int i = 0; i < list.size(); i++) {
             long l = list.get(i);
             System.out.println(l);
+            // get：用于获取列表中指定位置的元素。
         }
     }
     @Test
