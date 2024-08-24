@@ -55,7 +55,7 @@ public class XunHuan {
         while (i <= 20) {
             sum2 += i;
             if (sum2 > 50){
-                break;
+                break;// 结束离它最近的循环
             }
             i++;
         }
@@ -67,7 +67,7 @@ public class XunHuan {
         while (j <= 30) {
             if (j % 2 == 0){
                 j++;
-                continue;
+                continue;// 跳过当次循环  跳过就不执行continue后面的语句，重新到while
             }
             sum3 += j;
             ++j;

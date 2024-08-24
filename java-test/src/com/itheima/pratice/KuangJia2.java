@@ -33,10 +33,14 @@ public class KuangJia2 {
 
         // TODO 遍历2（entry）
         Set<Map.Entry<String,String>> entries = map.entrySet();
+        // entrySet：返回整体的键值对对象到Set（entries）中，   Map.Entry：固定格式
+        // <String,String>：和集合的类型一样
         for (Map.Entry<String,String> entry : entries){
-            String key = entry.getKey();
-            String value = entry.getValue();
-            System.out.println(key + "---->" + value);// 张三---->张三01
+            // 加强for循环   Map.Entry<String,String>：类型  entries：集合名字
+            //  entry：自己起的一个名字
+            String key = entry.getKey();// 取到键
+            String value = entry.getValue();// 取到值
+            System.out.println(key + "---->" + value);// 张三---->张三01 键+值 输出
         }
 
         // TODO 遍历3（Lambda）

@@ -20,6 +20,7 @@ public class WBRZ {
         // TODO 2.开始加载属性文件中的键值对数据到Properties对象中去
         properties.load(new FileReader("java-test\\src\\user.properties"));// 属性文件的路径
         System.out.println(properties);// {name=WANG SULONG, age=35}
+        // FileReader：用于读取文件内容
 
 
         // TODO 二:使用Dom4j读取Xml文件
@@ -50,16 +51,22 @@ public class WBRZ {
     </user>
     </users>
           */
+        //  TODO 这段代码的作用是读取一个XML文件，然后打印该XML文件的根元素的名称
         //  TODO 1.创建一个Dom4J框架提供的解析器对象
+        // 创建SAXReader对象：用来读取XML文件的
         SAXReader saxReader = new SAXReader();// SAXReader：构建Dom4J的解析器对象
 
         //  TODO 2.使用saxReader对象把需要解析的XML文件读成一个Document对象
+        // 读取XML文件并生成Document对象
         Document document =
                 saxReader.read("java-test\\src\\wangsulong.xml");
+        // Document对象代表了整个XML文档的树结构。
 
         //  TODO 3.从文档对象中解析XML文件的全部数据了
+        // 获取XML文档的根元素
+        // 根元素是XML文档的最顶层元素，所有其他元素都是它的子元素
         Element root = document.getRootElement();// getRootElement：获得根元素对象
-        System.out.println(root.getName());//
+        System.out.println(root.getName());//root.getName()方法返回根元素的名称字符串。
 
         // TODO 三:日志级别
         //    ①trace ②debug ③info ④warn ⑤error
