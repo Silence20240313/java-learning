@@ -36,17 +36,31 @@
 ![img_28.png](img_28.png)  
 ![img_29.png](img_29.png)  
 2.  Mybatis-基础操作-删除      
-p123
-
-
-
-
-3.  Mybatis-基础操作-删除（预编译SQL）    
+![img_34.png](img_34.png)  
+![img_31.png](img_31.png)  
+![img_32.png](img_32.png)  
+![img_33.png](img_33.png)  
+3.  Mybatis-基础操作-删除（预编译SQL）   
+![img_35.png](img_35.png)  
+![img_36.png](img_36.png)  
+![img_37.png](img_37.png)  
+![img_39.png](img_39.png)  
 4.  Mybatis-基础操作-新增    
-5.  Mybatis-基础操作-新增（主键返回）    
+![img_40.png](img_40.png)  
+![img_41.png](img_41.png)  
+5.  Mybatis-基础操作-新增（主键返回）   
+![img_42.png](img_42.png)  
+![img_43.png](img_43.png)  
 6.  Mybatis-基础操作-更新    
-7.  Mybatis-基础操作-查询（根据ID查询）    
-8.  Mybatis-基础操作-查询（条件查询）  
+![img_44.png](img_44.png)  
+![img_45.png](img_45.png)  
+7.  Mybatis-基础操作-查询（根据ID查询）  
+![img_46.png](img_46.png)  
+![img_47.png](img_47.png)  
+![img_49.png](img_49.png)  
+8.  Mybatis-基础操作-查询（条件查询） 
+
+p129!!
 9.  Mybatis-XML映射文件  
 
 
