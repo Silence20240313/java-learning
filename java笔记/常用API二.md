@@ -1,6 +1,6 @@
 ##  常用API二    
 ###  Math System Runtime  
-![img_94.png](../image2/img_94.png)  
+![img_94.png](../image/image2/img_94.png)  
 ```java
 package com.itheima.math;
 
@@ -38,7 +38,7 @@ public class MathTest {
 }
 
 ```
-![img_95.png](../image2/img_95.png)  
+![img_95.png](../image/image2/img_95.png)  
 ```java
 package com.itheima.math;
 
@@ -55,7 +55,7 @@ public class SystemTest {
 }
 
 ```
-![img_96.png](../image2/img_96.png)  
+![img_96.png](../image/image2/img_96.png)  
 ```java 
 package com.itheima.math;
 
@@ -88,7 +88,7 @@ public class RuntimeTest {
 
 ```
 ###  BigDecimal  
-![img_97.png](../image2/img_97.png)  
+![img_97.png](../image/image2/img_97.png)  
 ```java 
 package com.itheima.bigDecimal;
 
@@ -131,7 +131,7 @@ public class BigDecimalDemo1 {
 ```
 ###  JDK8之前传统的日期，时间  
 1.  Date  
-![img_98.png](../image2/img_98.png)  
+![img_98.png](../image/image2/img_98.png)  
 ```java
 package com.itheima.time;
 
@@ -162,10 +162,10 @@ public class Test1Date {
 
 ```
 2.  SimpleDateFormat  
-![img_99.png](../image2/img_99.png)  
-![img_100.png](../image2/img_100.png)  
-![img_101.png](../image2/img_101.png)  
-![img_102.png](../image2/img_102.png)  
+![img_99.png](../image/image2/img_99.png)  
+![img_100.png](../image/image2/img_100.png)  
+![img_101.png](../image/image2/img_101.png)  
+![img_102.png](../image/image2/img_102.png)  
 ```java 
 package com.itheima.time;
 import java.text.ParseException;
@@ -203,8 +203,8 @@ public class Test2simpleDateFormat {
 
 ```
 3.  Calendar  
-![img_103.png](../image2/img_103.png)  
-![img_105.png](../image2/img_105.png)  
+![img_103.png](../image/image2/img_103.png)  
+![img_105.png](../image/image2/img_105.png)  
 ```JAVA
 package com.itheima.time;
 
@@ -249,7 +249,7 @@ public class Test4Calendar {
 
 ```
 ###  JDK8开始新增的日期，时间  
-![img_106.png](../image2/img_106.png)  
+![img_106.png](../image/image2/img_106.png)  
 ```java
 package com.itheima.jdk8_time;
 import java.util.Calendar;
@@ -270,9 +270,9 @@ public class Test {
 }
 
 ```  
-![img_120.png](../image2/img_120.png)  
+![img_120.png](../image/image2/img_120.png)  
 1.  localDate  LocalTime localDateTime  
-![img_110.png](../image2/img_110.png)  
+![img_110.png](../image/image2/img_110.png)  
 ```java
 package com.itheima.jdk8_time;
 
@@ -424,12 +424,12 @@ public class Test3_localDateTime {
 }
 
 ```
-![img_111.png](../image2/img_111.png)  
-![img_112.png](../image2/img_112.png)  
-![img_113.png](../image2/img_113.png)  
+![img_111.png](../image/image2/img_111.png)  
+![img_112.png](../image/image2/img_112.png)  
+![img_113.png](../image/image2/img_113.png)  
 2.  Zoneld   ZoneDateTime  
-![img_115.png](../image2/img_115.png)  
-![img_116.png](../image2/img_116.png)  
+![img_115.png](../image/image2/img_115.png)  
+![img_116.png](../image/image2/img_116.png)  
 ```java
 package com.itheima.jdk8_time;
 
@@ -472,7 +472,7 @@ public class Test4_Zoneld_ZonedDateTime {
 
 ```
 3.  Instant  
-![img_118.png](../image2/img_118.png)   
+![img_118.png](../image/image2/img_118.png)   
 ```java
 package com.itheima.jdk8_time;
 
@@ -504,7 +504,7 @@ public class Test5_Instant {
 
 ```
 4.  DateTimeFormatter  
-![img_119.png](../image2/img_119.png)  
+![img_119.png](../image/image2/img_119.png)  
 ```java
 package com.itheima.jdk8_time;
 
@@ -536,7 +536,7 @@ public class Test6_DateTimeFormatter {
 
 ```  
 5.  Duration  Period  
-![img_122.png](../image2/img_122.png)  
+![img_122.png](../image/image2/img_122.png)  
 ```java
 package com.itheima.jdk8_time;
 
@@ -558,7 +558,7 @@ public class Test7_Period {
 }
 
 ```
-![img_121.png](../image2/img_121.png)  
+![img_121.png](../image/image2/img_121.png)  
 ```java
 package com.itheima.jdk8_time;
 
@@ -583,9 +583,9 @@ public class Test8_Duration {
 }
 
 ```  
-![img_123.png](../image2/img_123.png)  
+![img_123.png](../image/image2/img_123.png)  
 ###  Arrays  
-![img_124.png](../image2/img_124.png)  
+![img_124.png](../image/image2/img_124.png)  
 ```java 
 package com.itheima.arrays;
 
@@ -625,8 +625,8 @@ public class ArraysTest1 {
 }
 
 ```
-![img_125.png](../image2/img_125.png)  
-![img_127.png](../image2/img_127.png)  
+![img_125.png](../image/image2/img_125.png)  
+![img_127.png](../image/image2/img_127.png)  
 ```java
 package com.itheima.arrays;
 
@@ -749,7 +749,7 @@ public class ArraysTest2 {
 
 ```
 ###  JDK8新特性：Lambda表达式 
-![img_128.png](../image2/img_128.png)  
+![img_128.png](../image/image2/img_128.png)  
 ```java
 package com.itheima.lambda;
 
@@ -792,18 +792,18 @@ abstract class Animal{
     public abstract void run();
 }
 ```
-![img_129.png](../image2/img_129.png)  
-![img_130.png](../image2/img_130.png)  
+![img_129.png](../image/image2/img_129.png)  
+![img_130.png](../image/image2/img_130.png)  
 Lambda表达式的省略规则：  
-![img_131.png](../image2/img_131.png)  
+![img_131.png](../image/image2/img_131.png)  
 
 ###  JDK8新特性：方法引用  
 1.  静态方法的引用  
-![img_132.png](../image2/img_132.png)  
+![img_132.png](../image/image2/img_132.png)  
 2.  实例方法的引用  
-![img_133.png](../image2/img_133.png)  
+![img_133.png](../image/image2/img_133.png)  
 3.  特定类型方法的引用  
-![img_134.png](../image2/img_134.png)  
+![img_134.png](../image/image2/img_134.png)  
  ```JAVA
 package com.itheima.method_references;
 
@@ -837,5 +837,5 @@ public class Test2 {
 
 ```
 4.  构造器引用  
-![img_135.png](../image2/img_135.png)  
-![img_136.png](../image2/img_136.png)  
+![img_135.png](../image/image2/img_135.png)  
+![img_136.png](../image/image2/img_136.png)  
