@@ -51,6 +51,7 @@ blank:新页面打开超链接
 ![img_31.png](image/image5/img_31.png)  
 ![img_33.png](image/image5/img_33.png)  
 ![img_46.png](image/image5/img_46.png)  
+type="submit" 是用于创建表单的提交按钮  
 3.  表单项标签  
 ![img_36.png](image/image5/img_36.png)  
 ![img_37.png](image/image5/img_37.png)  
@@ -61,7 +62,8 @@ blank:新页面打开超链接
 
 
 ##  JS  
-
+用来给网页添加交互功能，可以实现动态更新内容、表单验证、动画效果、  
+数据处理、与服务器的通信等。使网页变得更为生动和互动，而不仅仅是静态显示内容。  
 ###  JS引入方式  
 ![img_50.png](image/image5/img_50.png)  
 ![img_51.png](image/image5/img_51.png)  
@@ -84,6 +86,7 @@ var:声明变量  可以存放不同类型的值  可以重复定义
 ![img_62.png](image/image5/img_62.png)  
 typeof:可以获取数据类型  
 运算符：==：会进行类型转换     ===：不会进行类型转换  
+parseInt()函数的用法，主要用于将字符串转换为整数。  
 类型转换：  
         ①数字转换为布尔类型：0和NaN为false,其他为true  
         ②字符串转换为布尔类型：空字符串为false,其他为true  
@@ -107,6 +110,7 @@ function 方法名（形参）{
 ![img_69.png](image/image5/img_69.png)  
 ![img_70.png](image/image5/img_70.png)  
 ![img_71.png](image/image5/img_71.png)  
+for循环快捷键：输入fori后按下Tab键  
 定义数组：数组长度可变，可以存储任意类型的数据    
 var 变量名 = [ 元素列表 ];  
 访问：  
@@ -165,7 +169,11 @@ location方法：跳转到指定的路径
 ![img_91.png](image/image5/img_91.png)  
 ![img_92.png](image/image5/img_92.png)  
 innerHTML：更改内容  
-
+TagName:标签名  
+ByName:属性名  
+checked=true的话 选中复选框  
+toLowerCase:变成小写  
+toUpperCase：变成大写  
 ###  JS事件监听  
 1.  事件绑定   
 ![img_93.png](image/image5/img_93.png)  
