@@ -4,6 +4,11 @@ Vue:html,js,css的结合体，框架！
 ![img.png](image/image6/img.png)  
 ![img_1.png](image/image6/img_1.png)  
 ![img_26.png](image/image6/img_26.png)  
+data对象中定义了一个message属性  
+数据模型将被绑定到视图中，并且可以动态地更新视图内容  
+v-model="message"用于实现双向数据绑定，当你在输入框中输入内容时，message的值会动态更新  
+{{ message }}会实时显示message的值  
+实现数据的双向绑定，用户输入的内容会自动更新绑定的数据，并且更新后的数据也会自动反映在视图上  
 ###  Vue常用指令   
 ![img_2.png](image/image6/img_2.png)  
 ![img_8.png](image/image6/img_8.png)  
@@ -18,6 +23,17 @@ Vue:html,js,css的结合体，框架！
 ![img_31.png](image/image6/img_31.png)  
 ![img_32.png](image/image6/img_32.png)  
 ![img_33.png](image/image6/img_33.png)  
+常用指令：  
+①v-bind:为标签绑定属性值，如href css样式   
+②v-model:表单元素上创建双向绑定  
+③v-on:为标签绑定事件  
+④v-if  v-else-if  v-else:条件性的渲染  
+⑤v-show:根据条件展示  
+⑥v-for:遍历元素或属性  
+Vue三部曲：  
+①引入Vue.js文件  
+②创建Vue核心对象，定义数据模型  
+③编写视图  
 ###  Vue生命周期   
 ![img_5.png](image/image6/img_5.png)    
 ![img_6.png](image/image6/img_6.png)  
@@ -30,6 +46,9 @@ Vue:html,js,css的结合体，框架！
 ![img_18.png](image/image6/img_18.png)    
 ![img_36.png](image/image6/img_36.png)  
 ![img_21.png](image/image6/img_21.png)    
+步骤：  
+①引入Axios的js文件  
+②使用Axios发送请求，并获取响应结果  
 2.  案例  
 ![img_22.png](image/image6/img_22.png)  
 
@@ -49,10 +68,14 @@ vue项目创建：命令行 vue create vue-project01
 3.  Vue项目开发流程  
 ![img_55.png](image/image6/img_55.png)  
 ![img_57.png](image/image6/img_57.png)   
-
+Vue三部曲：  
+①< template > :html代码  
+②< script >:创建对象  
+③< style >:css样式  
 
 ##  Vue组件库Element  
 ![img_40.png](image/image6/img_40.png)  
+好看的组件：超链接 按钮 图片 表格 表单 分页条等  
 1.  快速入门  
 ![img_41.png](image/image6/img_41.png)  
 2.  常见组件  

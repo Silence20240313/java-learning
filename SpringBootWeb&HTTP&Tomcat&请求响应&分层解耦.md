@@ -7,11 +7,14 @@ https://start.spring.io/
 ③用IDEA打开  
 ④  
 ![img_78.png](image/image7/img_78.png)  
+请求处理类(要实现什么功能)需要添加注解：stController  
+RequestMapping注解后面添加路径  
+return：返回执行的结果到路径下  
 ⑤运行-启动类  
 ![img_79.png](image/image7/img_79.png)  
 ⑥打开浏览器测试  
 ![img_80.png](image/image7/img_80.png)  
-
+ip+端口：localhost:本机ip 8080：默认端口  
 ###  HTTP协议  
 1.  概述  
 ![img_7.png](image/image7/img_7.png)  
@@ -44,6 +47,7 @@ https://start.spring.io/
 ![img_34.png](image/image7/img_34.png)  
 2.  postman工具  
 ![img_35.png](image/image7/img_35.png)  
+作用：发送请求到自己写的程序，看返回值，测试程序写的对不对  
 3.  简单参数&实体参数  
 简单参数：  
 繁琐：  
@@ -56,6 +60,14 @@ https://start.spring.io/
 ![img_43.png](image/image7/img_43.png)  
 ![img_45.png](image/image7/img_45.png)  
 ![img_46.png](image/image7/img_46.png)  
+post:参数隐藏在请求体里面，不在路径上体现，比较安全  用于新增的请求    
+请求属性：Body  
+get:参数体现在路径上，用于查询的请求  
+请求属性：Params  
+put:参数隐藏在请求体里面，不在路径上体现，比较安全 用于修改的请求  
+请求属性：Body  
+delete:参数体现在路径上，用于删除的请求  
+请求属性：Params  
 实体参数：  
 ![img_47.png](image/image7/img_47.png)   
 ![img_48.png](image/image7/img_48.png)  
@@ -86,6 +98,11 @@ json参数:需要在形参前面加注解：@RequestBody
 总结：  
 ![img_64.png](image/image7/img_64.png)  
 7.  @ResponseBody&统一响应效果  
+作用：正常情况下会返回不同类型的值 比如String List ...   
+现在要返回一个统一的值：统一响应结果  
+①code:响应码 比如0代表返回成功 1代表返回失败  
+②msg: 提示信息  比如 失败啦  成功啦   
+③date:返回的数据  比如 String List ...   
 ![img_65.png](image/image7/img_65.png)  
 ![img_66.png](image/image7/img_66.png)  
 ![img_67.png](image/image7/img_67.png)  
@@ -109,6 +126,12 @@ json参数:需要在形参前面加注解：@RequestBody
 ![img_89.png](image/image7/img_89.png)  
 ![img_90.png](image/image7/img_90.png)  
 ![img_91.png](image/image7/img_91.png)  
+不用new方法 就可以直接调用方法  
+IOC：类似于一个仓库，所有自动new出来的对象都放在这里，可以直接调用此仓库里对象的方法  
+并不是所有new出来的都放在IOC中，只有以下四个注解的new出来放在IOC中  
+①Component②Controller③Service④Repository  
+DI：从IOC里取出来的对象，放到使用类上  
+Autowried:只要有这个注解就说明 这个对象是从IOC中拿出来的 可以直接调用他的方法 
 4.  IOC详解  
 ![img_92.png](image/image7/img_92.png)  
 ![img_93.png](image/image7/img_93.png)  
