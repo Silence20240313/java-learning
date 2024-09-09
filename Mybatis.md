@@ -1,8 +1,12 @@
 ##  MyBatis    
 ### Mybatis入门  
 1.  Mybatis-入门-课程介绍  
+把java和mysql连接起来  
 ![img.png](image/image9/img.png)  
 2.  Mybatis-入门-快速入门程序  
+在springboot工程中使用  
+@Mapper 注解： 在运行时，会自动生成该接口的实现类对象（代理对象），并且将该对象交给IOC容器管理  
+@Autowired 注解：从IOC容器中取出来对象来 注入类中    
 ![img_2.png](image/image9/img_2.png)  
 ![img_3.png](image/image9/img_3.png)  
 ![img_4.png](image/image9/img_4.png)  
