@@ -36,6 +36,8 @@
 ### Mybatis基础增删改查    
 1.  Mybatis-基础操作-环境准备    
 修改properties文件编码：https://blog.csdn.net/startyangu/article/details/130621161  
+mapper：dao层 和数据库产生交互  自己建的实体类和数据库表建立联系  
+增删改查的操作在mapper中进行  
 ![img_26.png](image/image9/img_26.png)  
 ![img_28.png](image/image9/img_28.png)  
 ![img_29.png](image/image9/img_29.png)  
@@ -53,11 +55,17 @@
 ![img_40.png](image/image9/img_40.png)  
 ![img_41.png](image/image9/img_41.png)  
 5.  Mybatis-基础操作-新增（主键返回）   
+主键返回：Options  
 ![img_42.png](image/image9/img_42.png)  
 ![img_43.png](image/image9/img_43.png)  
+values：后面跟着的是实体类的属性的名字 驼峰模式  
+字段：create_time   值：createTime  
 6.  Mybatis-基础操作-更新    
 ![img_44.png](image/image9/img_44.png)  
 ![img_45.png](image/image9/img_45.png)  
+如果数据库表的字段名和实体类的属性名不一致，就不会自动封装  
+需要手动封装：Results和Result来进行封装  
+![img_1.png](img_1.png)      
 7.  Mybatis-基础操作-查询（根据ID查询）  
 ![img_46.png](image/image9/img_46.png)  
 ![img_47.png](image/image9/img_47.png)  
