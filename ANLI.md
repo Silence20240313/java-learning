@@ -15,7 +15,7 @@ https://start.spring.io/
 在pom.xml中引入依赖  
 引入依赖：https://mvnrepository.com/  
 步骤三：  
-配置application.properties文件
+配置application.properties文件  
 ![img_10.png](img_10.png)  
 创建与表对应的实体类  
 实体类中的属性与表结构的字段是一一对应的，实体类当中属性名采用驼峰命名，
@@ -34,7 +34,36 @@ https://start.spring.io/
 ③mapper 两个接口 加注解@Mapper  
 ④pojo存放两个实体类  
 
+###  开发规范  
+![img_15.png](img_15.png)  
+![img_16.png](img_16.png)  
+![img_17.png](img_17.png)  
+步骤五：  
+统一结果的封装类放到pojo包中  
+![img_24.png](img_24.png)  
 
-15分钟
+###  开发流程  
+![img_18.png](img_18.png)  
+
+###  功能开发-部门管理  
+1.  查询部门  
+![img_23.png](img_23.png)   
+①controller层代码：  
+
+   运行启动类 
+   用postman 访问路径 看是否可以调通
+
+controller需要调用service
+②service层代码：  
+③mapper层代码：  
+
+
+
+2.  前后端联调  
+![img_22.png](img_22.png)  
+![img_25.png](img_25.png)  
+3.  删除部门  
+
+4.  新增部门  
 
 
