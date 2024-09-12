@@ -48,22 +48,19 @@ https://start.spring.io/
 ###  功能开发-部门管理  
 1.  查询部门  
 ![img_23.png](img_23.png)   
-①controller层代码：  
-
-   运行启动类 
-   用postman 访问路径 看是否可以调通
-
-controller需要调用service
-②service层代码：  
-③mapper层代码：  
-
-
-
+![img_26.png](img_26.png)  
+测试：用postman访问路径，看是否可以调通（先运行启动类）  
 2.  前后端联调  
 ![img_22.png](img_22.png)  
 ![img_25.png](img_25.png)  
+前端启动：nginx   后端启动：springboot启动类  --->  联调  
 3.  删除部门  
-
+![img_28.png](img_28.png)  
 4.  新增部门  
+![img_31.png](img_31.png)  
+![img_29.png](img_29.png)  
+简化controller层代码：  
+![img_30.png](img_30.png)  
+
 
 
