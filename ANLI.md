@@ -62,5 +62,18 @@ https://start.spring.io/
 简化controller层代码：  
 ![img_30.png](img_30.png)  
 
+###  功能开发-员工管理  
+1.  分页查询  
+![img_37.png](img_37.png)  
+![img_32.png](img_32.png)  
+![img_34.png](img_34.png)  
+![img_35.png](img_35.png)  
+![img_36.png](img_36.png)  
+pojo包中定义PageBean实体类:分页查询结果的封装类  
+2.  分页查询-带条件  
+
+3.  删除员工  
 
 
+
+p142
