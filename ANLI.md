@@ -71,7 +71,10 @@ https://start.spring.io/
 ![img_36.png](img_36.png)  
 pojo包中定义PageBean实体类:分页查询结果的封装类  
 2.  分页查询-带条件  
-
+![img_38.png](img_38.png)  
+pom文件中引入依赖：  
+![img_39.png](img_39.png)  
+![img_40.png](img_40.png)  
 3.  删除员工  
 
 
