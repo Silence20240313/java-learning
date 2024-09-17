@@ -75,7 +75,13 @@ pojo包中定义PageBean实体类:分页查询结果的封装类
 pom文件中引入依赖：  
 ![img_39.png](img_39.png)  
 ![img_40.png](img_40.png)  
-3.  删除员工  
+3. 条件分页查询  
+![img_41.png](img_41.png)  
+![img_43.png](img_43.png)  
+4. 删除员工  
+
+
+
 
 
 
