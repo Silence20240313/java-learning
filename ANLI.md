@@ -78,11 +78,26 @@ pom文件中引入依赖：
 3. 条件分页查询  
 ![img_41.png](img_41.png)  
 ![img_43.png](img_43.png)  
+![img_44.png](img_44.png)  
 4. 删除员工  
+![img_46.png](img_46.png)  
+![img_47.png](img_47.png)  
+5. 新增员工  
+![img_48.png](img_48.png)  
+![img_49.png](img_49.png)  
+6. 文件上传  
+![img_51.png](img_51.png)  
+![img_52.png](img_52.png)  
+
+7. 修改员工  
+
+8. 配置文件  
+8.53
 
 
 
 
 
 
-p142
+
+
