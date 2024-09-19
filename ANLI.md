@@ -88,11 +88,35 @@ pom文件中引入依赖：
 6. 文件上传  
 ![img_51.png](img_51.png)  
 ![img_52.png](img_52.png)  
-
+![img_53.png](img_53.png)  
+![img_54.png](img_54.png)  
+![img_55.png](img_55.png)  
 7. 修改员工  
-
+![img_56.png](img_56.png)  
+![img_57.png](img_57.png)  
+![img_58.png](img_58.png)  
+![img_59.png](img_59.png)  
+![img_60.png](img_60.png)  
 8. 配置文件  
-8.53
+![img_61.png](img_61.png)  
+![img_63.png](img_63.png)  
+![img_64.png](img_64.png)  
+![img_65.png](img_65.png)  
+![img_66.png](img_66.png)  
+![img_67.png](img_67.png)  
+9. 登录功能  
+![img_68.png](img_68.png)  
+![img_69.png](img_69.png)  
+10. 登录校验  
+![img_70.png](img_70.png)  
+![img_71.png](img_71.png)  
+
+
+11. 异常处理  
+
+
+
+
 
 
 
