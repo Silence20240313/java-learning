@@ -129,21 +129,39 @@ pom文件中引入依赖：
 ![img_95.png](img_95.png)  
 ![img_96.png](img_96.png)  
 ![img_97.png](img_97.png)  
-
-
-
-164ge   7.37
-
-
-
-
-
-
-
-
-
-
+![img_98.png](img_98.png)  
+![img_99.png](img_99.png)  
+![img_100.png](img_100.png)  
+![img_102.png](img_102.png)  
 11. 异常处理  
+![img_103.png](img_103.png)  
+![img_104.png](img_104.png)  
+12. 事务管理  
+![img_106.png](img_106.png)  
+![img_107.png](img_107.png)  
+![img_108.png](img_108.png)  
+![img_109.png](img_109.png)  
+![img_110.png](img_110.png)  
+![img_111.png](img_111.png)  
+13. AOP基础  
+![img_113.png](img_113.png)  
+![img_114.png](img_114.png)  
+![img_115.png](img_115.png)  
+14. AOP进阶  
+![img_117.png](img_117.png)  
+![img_118.png](img_118.png)  
+![img_119.png](img_119.png)  
+![img_120.png](img_120.png)  
+
+
+
+
+15. AOP案例  
+
+16. 
+
+
+p179
 
 
 
