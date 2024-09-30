@@ -175,6 +175,13 @@ pom文件中引入依赖：
 ![img_143.png](img_143.png)  
 16. maven高级  
 ![img_144.png](img_144.png)  
+![img_145.png](img_145.png)  
+![img_146.png](img_146.png)  
+![img_147.png](img_147.png)  
+![img_148.png](img_148.png)  
+![img_149.png](img_149.png)  
+![img_150.png](img_150.png)  
+![img_151.png](img_151.png)  
 
 
 
@@ -183,7 +190,9 @@ pom文件中引入依赖：
 
 
 
-16. 
+
+
+
 
 
 
