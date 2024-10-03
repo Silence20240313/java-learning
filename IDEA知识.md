@@ -47,16 +47,20 @@ tabs快速切换：Alt+左箭头/右箭头
 查看浏览过的文件：Ctrl+E
 打开文件/类所在文件夹：Show In Explorer
 (项目路径不要带中文)
-### 3.快速查找和替换
-
-
-### 4.万能快捷键 Alt_Enter
-
-### 5.键盘鼠标的配合
-纵向选择多列：按住Alt键不放，鼠标点击拖动
-选中一大段代码：鼠标点击开始位置，找到尾行的位置，按住Shift+鼠标点击结尾位置
-快速移动复制代码：用【选中一大段代码】的方法，要选择到最上一行的结尾，光标定位到目标位置的上一行结尾，粘贴
-类或方法的跳转：Ctrl+鼠标左键
 # 三：运行与调试
+自动编译：  
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3899383/47eb1cce-0c28-4b94-d6b9-3497d1431ab1.png)
 # 四：高级进阶
+### 1.代码生成Generate
+生成set/get，构造函数，toString:Alt+Insert
+### 2.代码重构Refactor
+⭐重命名(局部变量，方法)：Shift+F6
+⭐自动生成返回值：Ctrl+Alt+V
+⭐移动文件位置：F6
+⭐撤销上一步操作：Ctrl+Z
+⭐文件复制:F5
+⭐文件删除：Alt+delete
 # 五：常用插件
+集成git插件
+①本地开发环境相关的文件不要提交。包括build,target,class等编译后生成的文件夹和文件
+②新建项目时，README文件和.gitignore文件都不要
