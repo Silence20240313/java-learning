@@ -20,7 +20,7 @@ SQL分为四大类：
 ![img_6.png](image/image8/img_6.png)  
 ![img_8.png](image/image8/img_8.png)  
 ![img_9.png](image/image8/img_9.png)  
-![img.png](img.png)  
+![img.png](image/image10/img.png)  
 5.  MySQL-DDL-图形化工具  
 DBeaver工具  
 6.  MySQL-DDL-表结构操作-创建  

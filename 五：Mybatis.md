@@ -65,7 +65,7 @@ values：后面跟着的是实体类的属性的名字 驼峰模式
 ![img_45.png](image/image9/img_45.png)  
 如果数据库表的字段名和实体类的属性名不一致，就不会自动封装  
 需要手动封装：Results和Result来进行封装  
-![img_1.png](img_1.png)      
+![img_1.png](image/image10/img_1.png)      
 7.  Mybatis-基础操作-查询（根据ID查询）  
 ![img_46.png](image/image9/img_46.png)  
 ![img_47.png](image/image9/img_47.png)  
