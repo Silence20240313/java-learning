@@ -1,9 +1,6 @@
 package com.msb.test01;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Test {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -16,13 +13,11 @@ public class Test {
         Connection conn = DriverManager.getConnection(url,username,password);
         // 创建会话
         Statement sta = conn.createStatement();
-        // 发送SQL
-        int i = sta.executeUpdate("insert into t_book(id,name,author,price) values(3,'java','赵姗姗',50)");
+        // 发送SQL  ResultSet结果集合
+        ResultSet rs = sta.executeQuery("select * from t_book where price < 60");
         // 处理结果
-        if (i > 0){ // 证明对数据库的条数有影响
-            System.out.println("插入成功");
-        }else {
-            System.out.println("插入失败");
+        while (rs.next()){ // 判断是否有记录存在
+            System.out.println(rs.getInt("id") + "---" + rs.getString("name") + "---" + rs.getString("author") + "---" + rs.getDouble("price"));
         }
         // 关闭资源
         sta.close();
