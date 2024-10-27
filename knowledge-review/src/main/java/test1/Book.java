@@ -1,42 +1,40 @@
 package test1;
 
 public class Book {
-    // TODO 书籍的编号/名称/作者
-    private int bNo;
-    private String bName;
-    private String bAuthor;
+    private int id;
+    private String name;
+    private String author;
+    private double price;
 
-    // TODO get/set方法 有参无参构造器
-    public int getbNo() {
-        return bNo;
+    public int getId() {
+        return id;
     }
 
-    public void setbNo(int bNo) {
-        this.bNo = bNo;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getbName() {
-        return bName;
+    public String getName() {
+        return name;
     }
 
-    public void setbName(String bName) {
-        this.bName = bName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getbAuthor() {
-        return bAuthor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setbAuthor(String bAuthor) {
-        this.bAuthor = bAuthor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public Book() {
+    public double getPrice() {
+        return price;
     }
 
-    public Book(int bNo, String bName, String bAuthor) {
-        this.bNo = bNo;
-        this.bName = bName;
-        this.bAuthor = bAuthor;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
