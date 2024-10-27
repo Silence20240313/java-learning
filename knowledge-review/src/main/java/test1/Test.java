@@ -10,9 +10,9 @@ public class Test {
         while (true) {
             // TODO 菜单
             System.out.println("----欢迎来到[丽丽猫]书城----");
-            System.out.println("1.展示书籍");
-            System.out.println("2.上架书籍");
-            System.out.println("3.下架书籍");
+            System.out.println("1.根据书籍编号查询书籍信息");
+            System.out.println("2.查询所有书籍信息");
+            System.out.println("3.删除指定书籍编号对应的书籍");
             System.out.println("4.退出应用");
             //TODO 借助Scanner类(键盘录入的数据扫描到程序中来)
             Scanner sc = new Scanner(System.in);
@@ -35,9 +35,28 @@ public class Test {
                 }
             }
             if (choice == 2){
-
+                // 查询所有书籍信息
+                ArrayList books = findBooks();
+                if (books.size() == 0){
+                    System.out.println("没有查询到书籍");
+                }else {
+                    for (int i = 0; i <= books.size() - 1 ; i++) {
+                        Book b = (Book)books.get(i);
+                        System.out.println(b.getId() + "--" + b.getName());
+                    }
+                }
             }
             if (choice == 3){
+                // 录入删除的书籍的编号
+                System.out.println("请录入您想要删除的书籍的编号");
+                int bno = sc.nextInt();
+                // 删除指定书籍编号对应的书籍
+                int n = delBookByBno(bno);
+                if (n <= 0){
+                    System.out.println("删除失败");
+                }else {
+                    System.out.println("删除成功");
+                }
 
             }
             if (choice == 4){
@@ -81,5 +100,61 @@ public class Test {
         conn.close();
 
         return b;
+    }
+
+    public static ArrayList findBooks() throws ClassNotFoundException, SQLException {
+        // 定义集合
+        ArrayList list = new ArrayList();
+        // 加载驱动
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        // 获取连接
+        String url = "jdbc:mysql://localhost:3306/wiki?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8\n";
+        String username = "root";
+        String password = "root";
+        Connection conn = DriverManager.getConnection(url,username,password);
+        // 创建会话
+        Statement sta = conn.createStatement();
+        // 发送SQL  ResultSet结果集合
+        ResultSet rs = sta.executeQuery("select * from t_book ");
+        // 处理结果
+        while (rs.next()){
+            // 先将结果做接收
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            String author = rs.getString("author");
+            double price = rs.getDouble("price");
+            // 将上面的数据封装为一个Book对象
+            Book b = new Book();
+            b.setId(id);
+            b.setName(name);
+            b.setAuthor(author);
+            b.setPrice(price);
+            // 将书籍放入集合中去
+            list.add(b);
+        }
+        // 关闭资源
+        sta.close();
+        conn.close();
+
+        return list;
+    }
+
+    public static int delBookByBno(int bno) throws ClassNotFoundException, SQLException {
+        // 加载驱动
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        // 获取连接
+        String url = "jdbc:mysql://localhost:3306/wiki?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8\n";
+        String username = "root";
+        String password = "root";
+        Connection conn = DriverManager.getConnection(url,username,password);
+        // 创建会话
+        Statement sta = conn.createStatement();
+        // 发送SQL
+        int n = sta.executeUpdate("delete  from t_book where id = " + bno );
+        // 关闭资源
+        sta.close();
+        conn.close();
+
+        return n;
     }
 }
